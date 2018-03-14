@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">d</arg>&gt; is never used or assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="643" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/3130103382/ADAD/ADAD/adtransfer.vhd</arg>&quot; line <arg fmt="%d" index="2">52</arg>: The result of a <arg fmt="%d" index="3">10</arg>x<arg fmt="%d" index="4">8</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">17</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+</msg>
+
+<msg type="warning" file="Xst" num="643" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/3130103382/ADAD/ADAD/adtransfer.vhd</arg>&quot; line <arg fmt="%d" index="2">53</arg>: The result of a <arg fmt="%d" index="3">4</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">5</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="unknown" >Unit &lt;<arg fmt="%s" index="1">LPM_MULT_3</arg>&gt;: instances &lt;<arg fmt="%s" index="2">Mxor__n0002&lt;1&gt;</arg>&gt;, &lt;<arg fmt="%s" index="3">Mxor__n0008&lt;1&gt;</arg>&gt; of unit &lt;<arg fmt="%s" index="4">LPM_XOR2_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="unknown" >Unit &lt;<arg fmt="%s" index="1">adtransfer</arg>&gt;: instances &lt;<arg fmt="%s" index="2">Msub__addsub0000_Mxor__xor0000</arg>&gt;, &lt;<arg fmt="%s" index="3">Msub__addsub0002_Mxor__xor0000</arg>&gt; of unit &lt;<arg fmt="%s" index="4">LPM_XOR2_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="unknown" >Unit &lt;<arg fmt="%s" index="1">adtransfer</arg>&gt;: instances &lt;<arg fmt="%s" index="2">Msub__addsub0000_Mxor_Result&lt;3&gt;_Mxor__xor0000</arg>&gt;, &lt;<arg fmt="%s" index="3">Msub__addsub0002_Mxor_Result&lt;3&gt;_Mxor__xor0000</arg>&gt; of unit &lt;<arg fmt="%s" index="4">LPM_XOR2_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="unknown" >Unit &lt;<arg fmt="%s" index="1">adtransfer</arg>&gt;: instances &lt;<arg fmt="%s" index="2">Msub__addsub0000_Mxor_Result&lt;2&gt;_Mxor__xor0000</arg>&gt;, &lt;<arg fmt="%s" index="3">Msub__addsub0002_Mxor_Result&lt;2&gt;_Mxor__xor0000</arg>&gt; of unit &lt;<arg fmt="%s" index="4">LPM_XOR2_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="unknown" >Unit &lt;<arg fmt="%s" index="1">adtransfer</arg>&gt;: instances &lt;<arg fmt="%s" index="2">Msub__addsub0000_Mxor_Result&lt;1&gt;_Mxor__xor0000</arg>&gt;, &lt;<arg fmt="%s" index="3">Msub__addsub0002_Mxor_Result&lt;1&gt;_Mxor__xor0000</arg>&gt; of unit &lt;<arg fmt="%s" index="4">LPM_XOR2_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="unknown" >Unit &lt;<arg fmt="%s" index="1">adtransfer</arg>&gt;: instances &lt;<arg fmt="%s" index="2">Mmult__mult0003_Mxor__n0002&lt;1&gt;</arg>&gt;, &lt;<arg fmt="%s" index="3">Mmult__mult0003_Mxor_Result&lt;7&gt;_Mxor__xor0000</arg>&gt; of unit &lt;<arg fmt="%s" index="4">LPM_XOR2_1</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+</messages>

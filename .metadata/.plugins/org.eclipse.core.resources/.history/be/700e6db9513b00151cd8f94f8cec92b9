@@ -1,0 +1,130 @@
+/*
+ * lcddisplay.c
+ *
+ *`  `Created on: 2015年7月29日
+ *      Author: c
+ */
+
+/*
+ * lcddisplay.c
+ *
+ *  Created on: 2015年7月29日
+ *      Author: c
+ */
+#include"MSP430X54X.h"
+#include"lcddisplay.h"
+#define uchar unsigned char
+#define lcddate P8OUT
+#define EH P3OUT|=BIT4
+#define EL P3OUT&=~BIT4
+#define RWH P3OUT|=BIT5
+#define RWL P3OUT&=~BIT5
+#define RSH P3OUT|=BIT0
+#define RSL P3OUT&=~BIT0
+#define lcd_rst P11OUT&BIT0
+
+void busy_lcd(void) //检测液晶忙信号
+{
+P8DIR&=~BIT7; //数`据口的P8.7 设置为输入读取忙信号
+RSL;
+RWH; //01 读忙信号`
+EH;
+;
+;
+while(P8IN&0x80); //e 高电平读入
+EL;
+P8DIR|=BIT7;
+}
+
+//`液晶写数据，`指令子程序
+void wr_lcd(uchar DATA,uchar flog)
+{
+    busy_lcd();   //10写数据
+    if(flog==0)
+	RSL; //flog 0为指令，1为数据
+	else
+	RSH;
+
+	RWL;
+	EH;
+	;
+	lcddate=DATA;
+	;
+	EL;
+}
+
+void lcd_Init(void) //1286`4 液晶初始化
+{
+wr_lcd(0x30,0); //功能设定为基本指令集
+//__delay_cycles(1000);
+wr_lcd(0x0c,0); //开显示关游标 0x08 关显示
+//__delay_cycles(1000);
+wr_lcd(0x01,0); //清除显示
+//__delay_cycles(1000);
+wr_lcd(0x06,0); //设定游标移动方向
+//__delay_cycles(1000);
+}
+
+
+
+void clc_lcd(void) //12864 清屏
+{
+wr_lcd(0x30,0);
+wr_lcd(0x01,0); //清DDRAM
+}
+//主要完成对液晶的清屏，使液晶可以再次正常显示.
+
+void gotoxy(unsigned char y, unsigned char x) //指定显示位置
+{
+if(y==1)
+wr_lcd(0x80|x,0); //第一行
+if(y==2)
+wr_lcd(0x90|x,0); //第二行
+if(y==3)
+wr_lcd((0x80|x)+8,0); //第三行
+if(y==4)
+wr_lcd((0x90|x)+8,0); //第四行
+}
+
+//字符串显示子程序`：
+void showstr(uchar *str) //显示字符串程序
+{
+while(*str!='\0')
+{
+wr_lcd(*str,1); //写入数据
+str++;
+}
+}
+
+
+void displaysz(uchar n,uchar *a) //显示一个数组
+{
+uchar i;
+for(i=0;i<n;i++)wr_lcd(a[i],1);
+}
+//本程序`主要对一个数字的各个位上`的量取出来之后，送与液晶显示
+
+
+void displayspeed(void)
+{
+
+	unsigned int standard;
+	standard=average;
+	unsigned int setside;
+	unsigned int maxad=set_average;
+	unsigned int minad=maxad-29;
+	setside=2*minad-29;
+       if(standard>minad&&standard<maxad){
+    	   act_time=(2*standard-setside);
+       }
+       if(standard>maxad&&standard<maxad-20){
+          	   act_time=(2*maxad-setside);
+       }
+       if(standard<minad&&standard>minad-20){
+          	   act_time=(2*minad-setside);
+       }
+
+
+}
+
+

@@ -1,0 +1,279 @@
+
+----------------------------------------
+|  P a r t i t i o n    S u c c e e d  |
+----------------------------------------
+0 Group(s)
+
+----------------- B l o c k 0 ------------------
+PLApt(56/56), Fanin(32/38), Clk(0/3), Bct(0/4), Pin(5/5), Mcell(14/16)
+PLApts[56/56] 239 245 247 251 252 71 236 238 404 120 237 243 246 405 118 558 559 560 429 61 430 431 61 248 
+              249 368 374 379 61 385 386 394 395 454 421 455 459 460 65 67 124 244 348 369 382 384 116 250 
+              361 381 383 350 355 364 403 402
+Fanins[32] h1<0>.n Mmult__mult0007_Mmult__mult0000__index0003.n Mmult__mult0007_Mmult__mult0000__index0005.n 
+           Mmult__mult0007_Mmult__mult0000__or0005.n Mmult__mult0007_Mmult__mult0000__or0014.n 
+           Mmult__mult0007__mult0000<10>.n Mmult__mult0007__mult0000<11>.n Mmult__mult0007__mult0000<13>.n 
+           Mmult__mult0007__mux0000<6>.n Mmult__mult0007__mux0000<7>.n Mmult__mult0007__mux0000<8>.n 
+           Mmult__mult0007__mux0000<9>.n Msub__addsub0000_Mxor_Result<2>__xor0000.n 
+           Msub__addsub0000__or0008.n N_PZ_102.n N_PZ_107.n N_PZ_155.n N_PZ_162.n N_PZ_278.n N_PZ_427.n 
+           N_PZ_51.n N_PZ_53.n N_PZ_68.n N_PZ_70.n N_PZ_75.n _addsub0000<4>.n _addsub0000<5>.n 
+           _addsub0000<6>.n _addsub0000<8>.n _addsub0002<3>.n _mult0000<13>.n _mult0007<16>.n
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[16] [h2<0>(103),h2<0>(99)] [h3<2>(106),h3<2>(97)] [h3<3>(112),h3<3>(96)] [date<4>(95)] [date<6>(94)]  
+           [N_PZ_427(116)] [_mult0007<11>(115)] [N_PZ_97(111)] [Mmult__mult0007__mux0000<8>(110)]  
+           [Mmult__mult0007__mux0000<9>(109)] [Mmult__mult0007_Mmult__mult0000__index0004(108)]  
+           [Mmult__mult0007_Mmult__mult0000__index0006(107)] [Mmult__mult0007_Mmult__mult0000__or0005(105)]  
+           [Mmult__mult0007_Mmult__mult0000__index0005(104)] [N_PZ_53(102)] [N_PZ_155(101)] 
+Signal[16] [ 0: N_PZ_155(101)  ][ 1: N_PZ_53(102)  ][ 2: h2<0>(103) h2<0>(99)  ][ 3:  
+           Mmult__mult0007_Mmult__mult0000__index0005(104)  ][ 4:  
+           Mmult__mult0007_Mmult__mult0000__or0005(105)  ][ 5: h3<2>(106) h3<2>(97)  ][ 6:  
+           Mmult__mult0007_Mmult__mult0000__index0006(107)  ][ 7:  
+           Mmult__mult0007_Mmult__mult0000__index0004(108)  ][ 8: Mmult__mult0007__mux0000<9>(109)  ][ 9:  
+           Mmult__mult0007__mux0000<8>(110)  ][ 10: N_PZ_97(111)  ][ 11: h3<3>(112) h3<3>(96)  ][ 12:  
+           date<4>(95)  ][ 13: date<6>(94)  ][ 14: _mult0007<11>(115)  ][ 15: N_PZ_427(116)  ]
+----------------- B l o c k 1 ------------------
+PLApt(56/56), Fanin(15/38), Clk(0/3), Bct(0/4), Pin(6/6), Mcell(8/16)
+PLApts[56/56] 31 34 261 263 264 588 590 596 597 598 1 606 607 612 613 614 33 616 617 12 584 585 586 587 589 
+              591 592 602 604 610 615 15 16 19 32 37 39 40 41 262 265 600 601 609 611 18 593 254 255 256 258 
+              259 266 30 35 29
+Fanins[15] Mmult__mult0000__index0005.n Mmult__mult0000__index0006.n N_PZ_311.n N_PZ_337.n N_PZ_416.n 
+           N_PZ_52.n date<0>.p date<1>.p date<2>.p date<3>.p date<4>.p date<5>.p date<6>.p date<7>.p 
+           date<8>.p
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[12] [B<0>(119),B<0>(2)] [B<3>(117),B<3>(1)] [date<0>(3)] [date<1>(4)] [date<2>(6)] [date<3>(7)]  
+           [Mmult__mult0000__or0010(132)] [Mmult__mult0000__index0005(129)]  
+           [Mmult__mult0000__index0006(127)] [Mmult__mult0000__or0005(126)] [N_PZ_311(125)] [N_PZ_337(124)] 
+Signal[12] [ 0: B<3>(117) B<3>(1)  ][ 1:  ][ 2: B<0>(119) B<0>(2)  ][ 3:  ][ 4: date<0>(3)  ][ 5:  ][ 6:  ] 
+           [ 7: N_PZ_337(124)  ][ 8: N_PZ_311(125)  ][ 9: Mmult__mult0000__or0005(126)  ][ 10:  
+           Mmult__mult0000__index0006(127)  ][ 11: date<1>(4)  ][ 12: Mmult__mult0000__index0005(129)  ] 
+           [ 13: date<2>(6)  ][ 14: date<3>(7)  ][ 15: Mmult__mult0000__or0010(132)  ]
+----------------- B l o c k 2 ------------------
+PLApt(56/56), Fanin(19/38), Clk(0/3), Bct(0/4), Pin(4/4), Mcell(13/16)
+PLApts[56/56] 14 17 178 179 229 307 309 310 311 318 146 322 325 326 228 286 303 287 291 304 312 315 316 321 
+              323 327 25 300 5 301 302 284 313 314 332 49 225 227 336 342 27 45 148 151 305 317 319 89 150 
+              152 223 226 147 149 230 234
+Fanins[19] Mmult__mult0000__index0008.n Mmult__mult0000__index0009.n Mmult__mult0000__index0010.n 
+           Mmult__mult0000__index0020.n Mmult__mult0000__index0021.n Mmult__mult0000__or0016.n 
+           Mmult__mult0000__or0018.n Msub__addsub0000__xor0010.n N_PZ_111.n N_PZ_174.n N_PZ_43.n N_PZ_57.n 
+           N_PZ_89.n _mult0000<17>.n _mult0000<20>.n date<10>.p date<11>.p date<8>.p date<9>.p
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[16] [B<10>(137),B<10>(93)] [date<10>(92)] [date<11>(91)] [date<8>(90)] [N_PZ_43(147)] [N_PZ_111(145)]  
+           [_mult0000<17>(143)] [Mmult__mult0000__index0021(142)] [Mmult__mult0000__or0018(141)]  
+           [Mmult__mult0000__index0020(140)] [Mmult__mult0000__index0010(139)] [_mult0000<18>(138)]  
+           [_mult0000<19>(136)] [Mmult__mult0000__index0009(135)] [_mult0000<20>(134)]  
+           [Msub__addsub0000__xor0010(133)] 
+Signal[16] [ 0: Msub__addsub0000__xor0010(133)  ][ 1: _mult0000<20>(134)  ][ 2:  
+           Mmult__mult0000__index0009(135)  ][ 3: _mult0000<19>(136)  ][ 4: B<10>(137) B<10>(93)  ][ 5:  
+           _mult0000<18>(138)  ][ 6: Mmult__mult0000__index0010(139)  ][ 7: Mmult__mult0000__index0020(140)  
+            ][ 8: Mmult__mult0000__or0018(141)  ][ 9: Mmult__mult0000__index0021(142)  ][ 10:  
+           _mult0000<17>(143)  ][ 11: date<10>(92)  ][ 12: N_PZ_111(145)  ][ 13: date<11>(91)  ][ 14:  
+           N_PZ_43(147)  ][ 15: date<8>(90)  ]
+----------------- B l o c k 3 ------------------
+PLApt(56/56), Fanin(19/38), Clk(0/3), Bct(0/4), Pin(3/6), Mcell(12/16)
+PLApts[56/56] 177 180 183 185 186 191 201 202 203 205 216 217 219 99 189 198 4 199 200 214 215 218 75 182 184 
+              77 82 85 73 170 543 74 540 544 87 187 207 81 169 72 204 83 95 94 96 102 105 107 111 174 90 106 
+              192 196 209 211
+Fanins[19] h1<0>.n h3<0>.n h3<1>.n Msub__addsub0000__or0005.n Msub__addsub0000__xor0005.n 
+           Msub__addsub0000__xor0010.n N_PZ_175.n N_PZ_42.n N_PZ_78.n _addsub0000<5>.n _addsub0000<6>.n 
+           _addsub0000<8>.n _addsub0002<3>.n _mult0000<13>.n _mult0000<17>.n _mult0000<18>.n _mult0000<19>.n 
+           _mult0000<20>.n date<11>.p
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[12] [B<11>(151),B<11>(10)] [h3<0>(149),h3<0>(8)] [h3<1>(150),h3<1>(9)]  
+           [Msub__addsub0000__or0005(164)] [_addsub0000<4>(163)] [_addsub0000<5>(162)] [N_PZ_78(160)]  
+           [N_PZ_175(159)] [N_PZ_278(158)] [_addsub0000<8>(157)] [Msub__addsub0000__or0008(156)]  
+           [_addsub0000<6>(155)] 
+Signal[12] [ 0: h3<0>(149) h3<0>(8)  ][ 1: h3<1>(150) h3<1>(9)  ][ 2: B<11>(151) B<11>(10)  ][ 3:  ][ 4:  
+           (11)  ][ 5: (12)  ][ 6: _addsub0000<6>(155)  ][ 7: Msub__addsub0000__or0008(156)  ][ 8:  
+           _addsub0000<8>(157)  ][ 9: N_PZ_278(158)  ][ 10: N_PZ_175(159)  ][ 11: N_PZ_78(160)  ][ 12: (13)  
+            ][ 13: _addsub0000<5>(162)  ][ 14: _addsub0000<4>(163)  ][ 15: Msub__addsub0000__or0005(164)  ]
+----------------- B l o c k 4 ------------------
+PLApt(56/56), Fanin(23/38), Clk(0/3), Bct(0/4), Pin(2/2), Mcell(15/16)
+PLApts[56/56] 54 521 522 524 525 526 527 528 529 530 531 533 535 537 53 260 267 534 536 3 523 532 619 623 38 
+              28 520 42 43 253 257 2 8 9 7 274 278 50 52 56 57 276 277 281 282 51 153 283 11 618 270 23 26 55 
+              130 132
+Fanins[23] Mmult__mult0000__index0005.n Mmult__mult0000__index0006.n Mmult__mult0000__index0007.n 
+           Mmult__mult0000__index0009.n Mmult__mult0000__index0010.n Mmult__mult0000__index0016.n 
+           Mmult__mult0000__index0018.n Mmult__mult0000__index0019.n Mmult__mult0000__or0005.n 
+           Mmult__mult0000__or0010.n Mmult__mult0000__or0022.n N_PZ_161.n N_PZ_269.n N_PZ_324.n N_PZ_52.n 
+           date<0>.p date<1>.p date<2>.p date<3>.p date<4>.p date<6>.p date<7>.p date<9>.p
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[15] [B<1>(168),B<1>(23)] [B<2>(170),B<2>(22)] [Mmult__mult0000__or0021(180)]  
+           [Mmult__mult0000__or0013(179)] [Mmult__mult0000__index0016(178)] [N_PZ_324(177)] [N_PZ_269(176)]  
+           [N_PZ_52(175)] [N_PZ_416(174)] [Mmult__mult0000__index0018(173)]  
+           [Mmult__mult0000__index0019(172)] [Mmult__mult0000__or0016(171)] [N_PZ_89(169)]  
+           [Mmult__mult0000__index0007(167)] [N_PZ_179(166)] 
+Signal[15] [ 0:  ][ 1: N_PZ_179(166)  ][ 2: Mmult__mult0000__index0007(167)  ][ 3: B<1>(168) B<1>(23)  ][ 4:  
+           N_PZ_89(169)  ][ 5: B<2>(170) B<2>(22)  ][ 6: Mmult__mult0000__or0016(171)  ][ 7:  
+           Mmult__mult0000__index0019(172)  ][ 8: Mmult__mult0000__index0018(173)  ][ 9: N_PZ_416(174)  ] 
+           [ 10: N_PZ_52(175)  ][ 11: N_PZ_269(176)  ][ 12: N_PZ_324(177)  ][ 13:  
+           Mmult__mult0000__index0016(178)  ][ 14: Mmult__mult0000__or0013(179)  ][ 15:  
+           Mmult__mult0000__or0021(180)  ]
+----------------- B l o c k 5 ------------------
+PLApt(56/56), Fanin(26/38), Clk(0/3), Bct(0/4), Pin(0/5), Mcell(14/16)
+PLApts[56/56] 173 371 372 406 414 415 509 510 511 514 515 516 517 433 434 435 436 437 508 633 637 640 646 172 
+              407 644 645 396 409 634 641 70 408 378 380 389 390 392 393 352 432 366 388 349 357 373 445 499 
+              500 241 346 358 362 443 444 449
+Fanins[26] h1<0>.n Mmult__mult0007_Mmult__mult0000__index0003.n Mmult__mult0007_Mmult__mult0000__index0004.n 
+           Mmult__mult0007_Mmult__mult0000__index0005.n Mmult__mult0007_Mmult__mult0000__index0006.n 
+           Mmult__mult0007_Mmult__mult0000__index0012.n Mmult__mult0007_Mmult__mult0000__index0013.n 
+           Mmult__mult0007_Mmult__mult0000__index0014.n Mmult__mult0007_Mmult__mult0000__or0009.n 
+           Mmult__mult0007_Mmult__mult0000__or0017.n Msub__addsub0000_Mxor_Result<2>__xor0000.n 
+           Msub__addsub0000__or0008.n N_PZ_102.n N_PZ_155.n N_PZ_162.n N_PZ_180.n N_PZ_275.n N_PZ_47.n 
+           N_PZ_53.n N_PZ_54.n N_PZ_70.n N_PZ_84.n _addsub0000<4>.n _addsub0000<5>.n _addsub0002<3>.n 
+           _mult0000<13>.n
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[14] [Mmult__mult0007_Mmult__mult0000__or0017(195)] [Mmult__mult0007_Mmult__mult0000__or0009(193)]  
+           [Mmult__mult0007_Mmult__mult0000__index0012(191)] [N_PZ_70(190)] [N_PZ_75(189)] [N_PZ_47(188)]  
+           [N_PZ_54(187)] [N_PZ_102(186)] [Mmult__mult0007_Mmult__mult0000__index0003(185)] [N_PZ_162(183)]  
+           [N_PZ_84(181)] [Mmult__mult0007_Mmult__mult0000__or0018(196)] [N_PZ_107(194)]  
+           [Mmult__mult0007_Mmult__mult0000__or0011(192)] 
+Signal[14] [ 0: N_PZ_84(181)  ][ 1: (24)  ][ 2: N_PZ_162(183)  ][ 3: (27)  ][ 4:  
+           Mmult__mult0007_Mmult__mult0000__index0003(185)  ][ 5: N_PZ_102(186)  ][ 6: N_PZ_54(187)  ][ 7:  
+           N_PZ_47(188)  ][ 8: N_PZ_75(189)  ][ 9: N_PZ_70(190)  ][ 10:  
+           Mmult__mult0007_Mmult__mult0000__index0012(191)  ][ 11:  
+           Mmult__mult0007_Mmult__mult0000__or0011(192) (28)  ][ 12:  
+           Mmult__mult0007_Mmult__mult0000__or0009(193)  ][ 13: N_PZ_107(194) (29)  ][ 14:  
+           Mmult__mult0007_Mmult__mult0000__or0017(195)  ][ 15: Mmult__mult0007_Mmult__mult0000__or0018(196)  
+           (30)  ]
+----------------- B l o c k 6 ------------------
+PLApt(56/56), Fanin(23/38), Clk(0/3), Bct(0/4), Pin(0/6), Mcell(15/16)
+PLApts[56/56] 652 653 654 655 656 657 426 478 425 488 467 493 498 658 469 477 479 480 482 486 489 491 428 468 
+              476 484 136 494 69 473 474 548 549 141 64 142 472 475 547 550 427 496 497 551 554 138 144 464 
+              465 134 135 137 492 495 453 462
+Fanins[23] Mmult__mult0007_Mmult__mult0000__index0008.n Mmult__mult0007_Mmult__mult0000__index0015.n 
+           Mmult__mult0007_Mmult__mult0000__index0016.n Mmult__mult0007_Mmult__mult0000__index0017.n 
+           Mmult__mult0007_Mmult__mult0000__or0005.n Mmult__mult0007_Mmult__mult0000__or0011.n 
+           Mmult__mult0007_Mmult__mult0000__or0012.n Mmult__mult0007_Mmult__mult0000__or0014.n 
+           Mmult__mult0007__mult0000<11>.n Mmult__mult0007__mult0000<13>.n Mmult__mult0007__mux0000<6>.n 
+           Mmult__mult0007__mux0000<7>.n Mmult__mult0007__mux0000<8>.n Mmult__mult0007__mux0000<9>.n 
+           N_PZ_107.n N_PZ_153.n N_PZ_270.n N_PZ_271.n N_PZ_275.n N_PZ_315.n N_PZ_51.n N_PZ_88.n N_PZ_97.n
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[15] [Mmult__mult0007_Mmult__mult0000__index0016(212)] [N_PZ_315(211)]  
+           [Mmult__mult0007_Mmult__mult0000__index0008(206)]  
+           [Mmult__mult0007_Mmult__mult0000__index0017(205)] [Mmult__mult0007_Mmult__mult0000__or0014(204)]  
+           [N_PZ_88(203)] [N_PZ_153(200)] [N_PZ_68(199)] [_mult0007<16>(198)]  
+           [Mmult__mult0007__mult0000<11>(197)] [Mmult__mult0007__mult0000<13>(210)] [N_PZ_271(209)]  
+           [N_PZ_275(208)] [N_PZ_51(207)] [Mmult__mult0007_Mmult__mult0000__or0012(202)] 
+Signal[15] [ 0: Mmult__mult0007__mult0000<11>(197)  ][ 1: _mult0007<16>(198)  ][ 2: N_PZ_68(199)  ][ 3:  
+           N_PZ_153(200)  ][ 4: (19)  ][ 5: Mmult__mult0007_Mmult__mult0000__or0012(202) (18)  ][ 6:  
+           N_PZ_88(203)  ][ 7: Mmult__mult0007_Mmult__mult0000__or0014(204)  ][ 8:  
+           Mmult__mult0007_Mmult__mult0000__index0017(205)  ][ 9:  
+           Mmult__mult0007_Mmult__mult0000__index0008(206)  ][ 10: N_PZ_51(207) (17)  ][ 11: N_PZ_275(208)  
+           (16)  ][ 12: N_PZ_271(209) (15)  ][ 13: Mmult__mult0007__mult0000<13>(210) (14)  ][ 14:  
+           N_PZ_315(211)  ][ 15: Mmult__mult0007_Mmult__mult0000__index0016(212)  ]
+----------------- B l o c k 7 ------------------
+PLApt(44/56), Fanin(23/38), Clk(0/3), Bct(0/4), Pin(6/6), Mcell(16/16)
+PLApts[44/53] 78 79 401 670 671 58 60 154 155 157 158 161 162 59 167 168 159 163 400 413 166 171 80 76 397 6 
+              410 538 539 627 631 626 628 629 6 630 632 221 294 297 7 () () () () () 667 () () 673 () () 220
+Fanins[23] h2<0>.n h2<1>.n h3<0>.n h3<1>.n Mmult__mult0000__index0008.n Mmult__mult0000__index0019.n 
+           Mmult__mult0000__index0020.n Mmult__mult0000__index0021.n Mmult__mult0000__or0013.n 
+           Mmult__mult0000__or0021.n Mmult__mult0000__or0025.n Msub__addsub0000_Mxor_Result<2>__xor0000.n 
+           Msub__addsub0000__xor0005.n N_PZ_179.n N_PZ_283.n N_PZ_302.n N_PZ_42.n N_PZ_58.n _mult0000<13>.n 
+           date<3>.p date<5>.p date<6>.p date<7>.p
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[17] [B<5>(218),B<5>(32)] [B<6>(223),B<6>(33)] [h1<1>(224),h1<1>(34)] [h1<2>(225),h1<2>(35)]  
+           [h1<3>(226),h1<3>(36)] [date<5>(37)] [Msub__addsub0000__xor0005(228)]  
+           [Mmult__mult0000__or0025(222)] [_mult0000<13>(221)] [N_PZ_302(220)]  
+           [Msub__addsub0000_Mxor_Result<2>__xor0000(219)] [_addsub0002<3>(217)] [N_PZ_283(216)]  
+           [N_PZ_161(215)] [Mmult__mult0000__or0022(214)] [N_PZ_174(213)] [N_PZ_42(227)] 
+Signal[17] [ 0: N_PZ_174(213)  ][ 1: Mmult__mult0000__or0022(214)  ][ 2: N_PZ_161(215)  ][ 3: N_PZ_283(216)  
+            ][ 4: _addsub0002<3>(217)  ][ 5: B<5>(218) B<5>(32)  ][ 6:  
+           Msub__addsub0000_Mxor_Result<2>__xor0000(219)  ][ 7: N_PZ_302(220)  ][ 8: _mult0000<13>(221)  ] 
+           [ 9: Mmult__mult0000__or0025(222)  ][ 10: B<6>(223) B<6>(33)  ][ 11: h1<1>(224) h1<1>(34)  ][ 12:  
+           h1<2>(225) h1<2>(35)  ][ 13: h1<3>(226) h1<3>(36)  ][ 14: N_PZ_42(227) date<5>(37)  ][ 15:  
+           Msub__addsub0000__xor0005(228)  ]
+----------------- B l o c k 8 ------------------
+PLApt(48/56), Fanin(33/38), Clk(0/3), Bct(0/4), Pin(5/5), Mcell(16/16)
+PLApts[48/53] 126 131 518 519 562 564 572 575 557 561 580 563 569 570 119 240 438 359 649 650 651 502 222 503 
+              504 0 505 506 507 446 501 63 117 125 419 367 370 416 681 682 21 24 330 0 331 387 391 () () () 
+              () () 36
+Fanins[33] h2<2>.n Mmult__mult0000__index0007.n Mmult__mult0000__index0018.n Mmult__mult0000__or0022.n 
+           Mmult__mult0007_Mmult__mult0000__index0006.n Mmult__mult0007_Mmult__mult0000__index0015.n 
+           Mmult__mult0007_Mmult__mult0000__or0009.n Mmult__mult0007_Mmult__mult0000__or0018.n 
+           Mmult__mult0007__mult0000<10>.n Mmult__mult0007__mult0000<11>.n Mmult__mult0007__mult0000<13>.n 
+           Mmult__mult0007__mux0000<6>.n Msub__addsub0000__or0005.n Msub__addsub0000__or0008.n N_PZ_155.n 
+           N_PZ_171.n N_PZ_180.n N_PZ_278.n N_PZ_427.n N_PZ_43.n N_PZ_53.n N_PZ_68.n N_PZ_84.n N_PZ_89.n 
+           _addsub0000<4>.n _addsub0000<5>.n _addsub0000<6>.n _addsub0002<3>.n _mult0007<11>.n 
+           _mult0007<12>.n date<11>.p date<4>.p date<9>.p
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[16] [B<4>(234),B<4>(81)] [h1<0>(240),h1<0>(82)] [h2<1>(232),h2<1>(80)] [h2<2>(230),h2<2>(79)]  
+           [h2<3>(229),h2<3>(78)] [_mult0007<12>(244)] [Mmult__mult0007__mux0000<6>(243)]  
+           [Mmult__mult0007_Mmult__mult0000__index0014(242)] [Mmult__mult0007__mult0000<10>(241)]  
+           [N_PZ_270(239)] [Mmult__mult0007__mux0000<7>(238)] [N_PZ_180(237)] [N_PZ_58(236)] [N_PZ_57(235)]  
+           [Mmult__mult0000__index0008(233)] [Mmult__mult0007_Mmult__mult0000__index0013(231)] 
+Signal[16] [ 0: h2<3>(229) h2<3>(78)  ][ 1: h2<2>(230) h2<2>(79)  ][ 2:  
+           Mmult__mult0007_Mmult__mult0000__index0013(231)  ][ 3: h2<1>(232) h2<1>(80)  ][ 4:  
+           Mmult__mult0000__index0008(233)  ][ 5: B<4>(234) B<4>(81)  ][ 6: N_PZ_57(235)  ][ 7: N_PZ_58(236)  
+            ][ 8: N_PZ_180(237)  ][ 9: Mmult__mult0007__mux0000<7>(238)  ][ 10: N_PZ_270(239)  ][ 11:  
+           h1<0>(240) h1<0>(82)  ][ 12: Mmult__mult0007__mult0000<10>(241)  ][ 13:  
+           Mmult__mult0007_Mmult__mult0000__index0014(242)  ][ 14: Mmult__mult0007__mux0000<6>(243)  ][ 15:  
+           _mult0007<12>(244)  ]
+----------------- B l o c k 9 ------------------
+PLApt(10/56), Fanin(11/38), Clk(0/3), Bct(0/4), Pin(5/7), Mcell(5/16)
+PLApts[10/56] 456 462 447 448 450 451 () () () () 10 () () 13 () () 20 () () () () () () () () () () () () () 
+              () () () () () () () () () () () () () () () () () () () () () () () () () 452
+Fanins[11] Mmult__mult0007_Mmult__mult0000__index0006.n Mmult__mult0007_Mmult__mult0000__index0008.n 
+           Mmult__mult0007_Mmult__mult0000__index0013.n Mmult__mult0007_Mmult__mult0000__or0009.n 
+           Mmult__mult0007_Mmult__mult0000__or0011.n N_PZ_107.n N_PZ_180.n N_PZ_275.n date<7>.p date<8>.p 
+           date<9>.p
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 7] [B<7>(245),B<7>(77)] [B<8>(246),B<8>(76)] [B<9>(247),B<9>(74)] [date<7>(73)] [date<9>(72)]  
+           [Mmult__mult0007_Mmult__mult0000__index0015(260)] [N_PZ_171(259)] 
+Signal[ 7] [ 0: B<7>(245) B<7>(77)  ][ 1: B<8>(246) B<8>(76)  ][ 2: B<9>(247) B<9>(74)  ][ 3: date<7>(73)  ] 
+           [ 4: date<9>(72)  ][ 5: (71)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10:  ][ 11: (70)  ][ 12:  ][ 13:  ] 
+           [ 14: N_PZ_171(259)  ][ 15: Mmult__mult0007_Mmult__mult0000__index0015(260)  ]
+----------------- B l o c k 10 ------------------
+----------------- B l o c k 11 ------------------
+----------------- B l o c k 12 ------------------
+----------------- B l o c k 13 ------------------
+----------------- B l o c k 14 ------------------
+----------------- B l o c k 15 ------------------

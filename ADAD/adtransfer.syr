@@ -1,0 +1,222 @@
+Release 8.2i - xst I.31
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.09 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.09 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: adtransfer.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "adtransfer.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "adtransfer"
+Output Format                      : NGC
+Target Device                      : Automotive CoolRunner2
+
+---- Source Options
+Top Module Name                    : adtransfer
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : YES
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+
+---- Other Options
+lso                                : adtransfer.lso
+verilog2001                        : YES
+safe_implementation                : No
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/3130103382/ADAD/ADAD/adtransfer.vhd" in Library work.
+Entity <adtransfer> compiled.
+Entity <adtransfer> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <adtransfer> in library <work> (architecture <behavioral>).
+
+Building hierarchy successfully finished.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <adtransfer> in library <work> (Architecture <behavioral>).
+Entity <adtransfer> analyzed. Unit <adtransfer> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <adtransfer>.
+    Related source file is "C:/3130103382/ADAD/ADAD/adtransfer.vhd".
+WARNING:Xst:1780 - Signal <d> is never used or assigned.
+WARNING:Xst:643 - "C:/3130103382/ADAD/ADAD/adtransfer.vhd" line 52: The result of a 10x8-bit multiplication is partially used. Only the 17 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "C:/3130103382/ADAD/ADAD/adtransfer.vhd" line 53: The result of a 4x4-bit multiplication is partially used. Only the 5 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 4-bit subtractor for signal <h1>.
+    Found 17-bit adder for signal <$add0000>.
+    Found 10-bit subtractor for signal <$addsub0000> created at line 52.
+    Found 17-bit adder for signal <$addsub0001>.
+    Found 4-bit subtractor for signal <$addsub0002> created at line 53.
+    Found 12x9-bit multiplier for signal <$mult0000> created at line 50.
+    Found 9x4-bit multiplier for signal <$mult0001> created at line 51.
+    Found 2x7-bit multiplier for signal <$mult0003> created at line 53.
+    Found 10x8-bit multiplier for signal <$mult0007> created at line 52.
+    Found 4x4-bit multiplier for signal <$mult0008> created at line 53.
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred   5 Multiplier(s).
+Unit <adtransfer> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 5
+ 10x8-bit multiplier                                   : 1
+ 12x9-bit multiplier                                   : 1
+ 2x7-bit multiplier                                    : 1
+ 4x4-bit multiplier                                    : 1
+ 9x4-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 5
+ 10-bit subtractor                                     : 1
+ 17-bit adder                                          : 2
+ 4-bit subtractor                                      : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 5
+ 10x8-bit multiplier                                   : 1
+ 12x9-bit multiplier                                   : 1
+ 2x7-bit multiplier                                    : 1
+ 4x4-bit multiplier                                    : 1
+ 9x4-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 5
+ 10-bit subtractor                                     : 1
+ 17-bit adder                                          : 2
+ 4-bit subtractor                                      : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1989 - Unit <LPM_MULT_3>: instances <Mxor__n0002<1>>, <Mxor__n0008<1>> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <adtransfer>: instances <Msub__addsub0000_Mxor__xor0000>, <Msub__addsub0002_Mxor__xor0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <adtransfer>: instances <Msub__addsub0000_Mxor_Result<3>_Mxor__xor0000>, <Msub__addsub0002_Mxor_Result<3>_Mxor__xor0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <adtransfer>: instances <Msub__addsub0000_Mxor_Result<2>_Mxor__xor0000>, <Msub__addsub0002_Mxor_Result<2>_Mxor__xor0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <adtransfer>: instances <Msub__addsub0000_Mxor_Result<1>_Mxor__xor0000>, <Msub__addsub0002_Mxor_Result<1>_Mxor__xor0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <adtransfer>: instances <Mmult__mult0003_Mxor__n0002<1>>, <Mmult__mult0003_Mxor_Result<7>_Mxor__xor0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+
+Optimizing unit <adtransfer> ...
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : adtransfer.ngr
+Top Level Output File Name         : adtransfer
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : YES
+Target Technology                  : Automotive CoolRunner2
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 36
+
+Cell Usage :
+# BELS                             : 645
+#      AND2                        : 203
+#      AND3                        : 3
+#      AND4                        : 1
+#      AND8                        : 2
+#      GND                         : 1
+#      INV                         : 121
+#      OR2                         : 143
+#      OR3                         : 2
+#      VCC                         : 1
+#      XOR2                        : 168
+# IO Buffers                       : 36
+#      IBUF                        : 12
+#      OBUF                        : 24
+=========================================================================
+CPU : 3.18 / 3.27 s | Elapsed : 3.00 / 3.00 s
+ 
+--> 
+
+Total memory usage is 170208 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

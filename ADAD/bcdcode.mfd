@@ -1,0 +1,91 @@
+MDF Database:  version 1.0
+MDF_INFO | bcdcode | XA2C32A-6-VQ44
+MACROCELL | 0 | 2 | bcd_code<0>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 5 | d<3>  | N_PZ_13  | d<2>  | d<1>  | d<0>
+INPUTMC | 1 | 0 | 15
+INPUTP | 4 | 38 | 39 | 40 | 41
+EQ | 3 | 
+   bcd_code<0> = d<3> & !N_PZ_13
+	# !d<3> & N_PZ_13
+	# d<2> & d<1> & d<0> & !d<3>;	// (3 pt, 5 inp)
+
+MACROCELL | 0 | 15 | N_PZ_13_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 7 | 0 | 2 | 0 | 0 | 0 | 6 | 0 | 3 | 0 | 1 | 0 | 5 | 0 | 4
+INPUTS | 2 | d<2>  | d<1>
+INPUTP | 2 | 39 | 40
+EQ | 1 | 
+   N_PZ_13 = !d<2> & !d<1>;	// (1 pt, 2 inp)
+
+MACROCELL | 0 | 0 | bcd_code<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 5 | d<2>  | N_PZ_13  | d<1>  | d<0>  | d<3>
+INPUTMC | 1 | 0 | 15
+INPUTP | 4 | 39 | 40 | 41 | 38
+EQ | 4 | 
+   bcd_code<1> = !d<2> & !N_PZ_13
+	# d<1> & d<0>
+	# d<3> & !N_PZ_13
+	# !d<2> & d<0> & !d<3>;	// (4 pt, 5 inp)
+
+MACROCELL | 0 | 6 | bcd_code<2>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | d<0>  | N_PZ_13  | d<1>  | d<3>
+INPUTMC | 1 | 0 | 15
+INPUTP | 3 | 41 | 40 | 38
+EQ | 2 | 
+   !bcd_code<2> = !d<0> & N_PZ_13
+	# d<1> & !d<0> & !d<3>;	// (2 pt, 4 inp)
+
+MACROCELL | 0 | 3 | bcd_code<3>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 5 | d<3>  | N_PZ_13  | d<0>  | d<2>  | d<1>
+INPUTMC | 1 | 0 | 15
+INPUTP | 4 | 38 | 41 | 39 | 40
+EQ | 4 | 
+   bcd_code<3> = d<3> & !N_PZ_13
+	# d<0> & !d<3> & N_PZ_13
+	# d<2> & d<1> & d<0> & !d<3>
+	# d<2> & !d<1> & !d<0> & !d<3>;	// (4 pt, 5 inp)
+
+MACROCELL | 0 | 1 | bcd_code<4>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 5 | d<3>  | N_PZ_13  | d<2>  | d<1>  | d<0>
+INPUTMC | 1 | 0 | 15
+INPUTP | 4 | 38 | 39 | 40 | 41
+EQ | 2 | 
+   bcd_code<4> = d<3> & !N_PZ_13
+	# !d<2> & d<1> & !d<0> & !d<3>;	// (2 pt, 5 inp)
+
+MACROCELL | 0 | 5 | bcd_code<5>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 5 | d<3>  | N_PZ_13  | d<2>  | d<1>  | d<0>
+INPUTMC | 1 | 0 | 15
+INPUTP | 4 | 38 | 39 | 40 | 41
+EQ | 3 | 
+   bcd_code<5> = d<3> & !N_PZ_13
+	# d<2> & d<1> & !d<0> & !d<3>
+	# d<2> & !d<1> & d<0> & !d<3>;	// (3 pt, 5 inp)
+
+MACROCELL | 0 | 4 | bcd_code<6>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 5 | d<3>  | N_PZ_13  | d<0>  | d<2>  | d<1>
+INPUTMC | 1 | 0 | 15
+INPUTP | 4 | 38 | 41 | 39 | 40
+EQ | 3 | 
+   bcd_code<6> = d<3> & !N_PZ_13
+	# d<0> & !d<3> & N_PZ_13
+	# d<2> & !d<1> & !d<0> & !d<3>;	// (3 pt, 5 inp)
+
+PIN | d<2> | 64 | 16 | LVCMOS18 | 39 | 7 | 0 | 15 | 0 | 2 | 0 | 0 | 0 | 3 | 0 | 1 | 0 | 5 | 0 | 4
+PIN | d<1> | 64 | 16 | LVCMOS18 | 40 | 8 | 0 | 15 | 0 | 2 | 0 | 0 | 0 | 6 | 0 | 3 | 0 | 1 | 0 | 5 | 0 | 4
+PIN | d<0> | 64 | 16 | LVCMOS18 | 41 | 7 | 0 | 2 | 0 | 0 | 0 | 6 | 0 | 3 | 0 | 1 | 0 | 5 | 0 | 4
+PIN | d<3> | 64 | 16 | LVCMOS18 | 38 | 7 | 0 | 2 | 0 | 0 | 0 | 6 | 0 | 3 | 0 | 1 | 0 | 5 | 0 | 4
+PIN | bcd_code<0> | 536871040 | 0 | LVCMOS18 | 3
+PIN | bcd_code<1> | 536871040 | 0 | LVCMOS18 | 5
+PIN | bcd_code<2> | 536871040 | 0 | LVCMOS18 | 42
+PIN | bcd_code<3> | 536871040 | 0 | LVCMOS18 | 1
+PIN | bcd_code<4> | 536871040 | 0 | LVCMOS18 | 4
+PIN | bcd_code<5> | 536871040 | 0 | LVCMOS18 | 43
+PIN | bcd_code<6> | 536871040 | 0 | LVCMOS18 | 44

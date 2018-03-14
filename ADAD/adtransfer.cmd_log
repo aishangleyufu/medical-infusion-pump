@@ -1,0 +1,56 @@
+xst -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -ifn adtransfer.xst -ofn adtransfer.syr
+xst -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -ifn adtransfer.xst -ofn adtransfer.syr
+xst -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -ifn adtransfer.xst -ofn adtransfer.syr
+xst -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -ifn adtransfer.xst -ofn adtransfer.syr
+xst -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -ifn adtransfer.xst -ofn adtransfer.syr
+xst -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -ifn adtransfer.xst -ofn adtransfer.syr
+xst -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -ifn adtransfer.xst -ofn adtransfer.syr
+xst -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -ifn adtransfer.xst -ofn adtransfer.syr
+xst -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -ifn adtransfer.xst -ofn adtransfer.syr
+xst -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -ifn adtransfer.xst -ofn adtransfer.syr
+xst -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -ifn adtransfer.xst -ofn adtransfer.syr
+ngdbuild -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -dd _ngo -i -p acr2 "adtransfer.ngc" adtransfer.ngd
+cpldfit -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -p xa2c*-*-* -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -inreg on -blkfanin 38 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 adtransfer.ngd
+XSLTProcess -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" adtransfer_build.xml
+tsim -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise adtransfer adtransfer.nga
+taengine -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -f adtransfer -w --format html1 -l C:/3130103382/ADAD/ADAD/adtransfer_html/tim/timing_report.htm
+hprep6 -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -s IEEE1149 -i adtransfer
+xst -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -ifn adtransfer.xst -ofn adtransfer.syr
+xst -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -ifn adtransfer.xst -ofn adtransfer.syr
+xst -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -ifn adtransfer.xst -ofn adtransfer.syr
+ngdbuild -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -dd _ngo -i -p acr2 "adtransfer.ngc" adtransfer.ngd
+cpldfit -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -p xa2c*-*-* -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -inreg on -blkfanin 38 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 adtransfer.ngd
+XSLTProcess -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" adtransfer_build.xml
+tsim -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise adtransfer adtransfer.nga
+taengine -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -f adtransfer -w --format html1 -l C:/3130103382/ADAD/ADAD/adtransfer_html/tim/timing_report.htm
+hprep6 -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -s IEEE1149 -i adtransfer
+xst -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -ifn adtransfer.xst -ofn adtransfer.syr
+ngdbuild -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -dd _ngo -i -p acr2 "adtransfer.ngc" adtransfer.ngd
+cpldfit -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -p xa2c*-*-* -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -inreg on -blkfanin 38 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 adtransfer.ngd
+XSLTProcess -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" adtransfer_build.xml
+tsim -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise adtransfer adtransfer.nga
+taengine -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -f adtransfer -w --format html1 -l C:/3130103382/ADAD/ADAD/adtransfer_html/tim/timing_report.htm
+hprep6 -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -s IEEE1149 -i adtransfer
+xst -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -ifn adtransfer.xst -ofn adtransfer.syr
+xst -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -ifn adtransfer.xst -ofn adtransfer.syr
+xst -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -ifn adtransfer.xst -ofn adtransfer.syr
+ngdbuild -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -dd _ngo -i -p acr2 "adtransfer.ngc" adtransfer.ngd
+cpldfit -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -p xa2c*-*-* -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -inreg on -blkfanin 38 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 adtransfer.ngd
+XSLTProcess -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" adtransfer_build.xml
+tsim -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise adtransfer adtransfer.nga
+taengine -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -f adtransfer -w --format html1 -l C:/3130103382/ADAD/ADAD/adtransfer_html/tim/timing_report.htm
+hprep6 -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -s IEEE1149 -i adtransfer
+xst -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -ifn adtransfer.xst -ofn adtransfer.syr
+ngdbuild -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -dd _ngo -i -p acr2 "adtransfer.ngc" adtransfer.ngd
+cpldfit -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -p xa2c*-*-* -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -inreg on -blkfanin 38 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 adtransfer.ngd
+XSLTProcess -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" adtransfer_build.xml
+tsim -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise adtransfer adtransfer.nga
+taengine -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -f adtransfer -w --format html1 -l C:/3130103382/ADAD/ADAD/adtransfer_html/tim/timing_report.htm
+hprep6 -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -s IEEE1149 -i adtransfer
+xst -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -ifn adtransfer.xst -ofn adtransfer.syr
+ngdbuild -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -dd _ngo -i -p acr2 "adtransfer.ngc" adtransfer.ngd
+cpldfit -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -p xa2c*-*-* -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -inreg on -blkfanin 38 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 adtransfer.ngd
+XSLTProcess -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" adtransfer_build.xml
+tsim -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise adtransfer adtransfer.nga
+taengine -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -intstyle ise -f adtransfer -w --format html1 -l C:/3130103382/ADAD/ADAD/adtransfer_html/tim/timing_report.htm
+hprep6 -ise "C:/3130103382/ADAD/ADAD/ADAD.ise" -s IEEE1149 -i adtransfer

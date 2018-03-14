@@ -1,0 +1,1 @@
+"./adtransfer.obj" "./clc_Init.obj" "./clock.obj" "./fourkey.obj" "./keyscan.obj" "./lcddisplay.obj" "./main.obj" "./pidctl.obj" "./pwm.obj" "../lnk_msp430f5438a.cmd" -l"libmath.a" -l"libc.a" 

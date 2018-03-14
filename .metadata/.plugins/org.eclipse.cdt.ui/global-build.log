@@ -1,0 +1,136 @@
+
+**** Build of configuration Debug for project shuyebeng ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../pidctl.c'
+'Invoking: MSP430 Compiler'
+"C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --include_path="C:/ti/ccsv6/ccs_base/msp430/include" --include_path="C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/include" --advice:power=all -g --define=__MSP430F5438A__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal --preproc_with_compile --preproc_dependency="pidctl.pp"  "../pidctl.c"
+"../pidctl.c", line 86: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../pidctl.c", line 90: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../pidctl.c", line 93: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../pidctl.c", line 102: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../pidctl.c", line 108: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../pidctl.c", line 111: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../pidctl.c", line 15: remark #1535-D: (ULP 8.1) variable "Kp" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../pidctl.c", line 18: remark #1535-D: (ULP 8.1) variable "Ki" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../pidctl.c", line 21: remark #1535-D: (ULP 8.1) variable "ek2" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../pidctl.c", line 22: remark #1535-D: (ULP 8.1) variable "uk" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../pidctl.c", line 23: remark #1535-D: (ULP 8.1) variable "uk1" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../pidctl.c", line 24: remark #1535-D: (ULP 8.1) variable "adjust" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../pidctl.c", line 27: remark #1535-D: (ULP 8.1) variable "ddisduty" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../pidctl.c", line 29: remark #1535-D: (ULP 8.1) variable "tspeed" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../pidctl.c", line 30: remark #1535-D: (ULP 8.1) variable "freq_bef" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../pidctl.c", line 39: remark #1535-D: (ULP 8.1) variable "average_bef" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../pidctl.c'
+' '
+'Building target: shuyebeng.out'
+'Invoking: MSP430 Linker'
+"C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --advice:power=all -g --define=__MSP430F5438A__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal -z -m"shuyebeng.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"C:/ti/ccsv6/ccs_base/msp430/include" -i"C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/lib" -i"C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/include" -i"C:/ti/ccsv6/ccs_base/msp430/lib/5xx_6xx_FRxx" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="shuyebeng_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "shuyebeng.out" "./adtransfer.obj" "./clc_Init.obj" "./clock.obj" "./fourkey.obj" "./keyscan.obj" "./lcddisplay.obj" "./main.obj" "./pidctl.obj" "./pwm.obj" "../lnk_msp430f5438a.cmd"  -l"libmath.a" -l"libc.a" 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port E in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port F in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+'Finished building target: shuyebeng.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project shuyebeng ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+gmake: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project shuyebeng ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+gmake: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project shuyebeng ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+gmake: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project shuyebeng ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+gmake: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project shuyebeng ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../pidctl.c'
+'Invoking: MSP430 Compiler'
+"C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --include_path="C:/ti/ccsv6/ccs_base/msp430/include" --include_path="C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/include" --advice:power=all -g --define=__MSP430F5438A__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal --preproc_with_compile --preproc_dependency="pidctl.pp"  "../pidctl.c"
+"../pidctl.c", line 86: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../pidctl.c", line 90: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../pidctl.c", line 93: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../pidctl.c", line 102: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../pidctl.c", line 108: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../pidctl.c", line 111: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../pidctl.c", line 15: remark #1535-D: (ULP 8.1) variable "Kp" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../pidctl.c", line 18: remark #1535-D: (ULP 8.1) variable "Ki" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../pidctl.c", line 21: remark #1535-D: (ULP 8.1) variable "ek2" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../pidctl.c", line 22: remark #1535-D: (ULP 8.1) variable "uk" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../pidctl.c", line 23: remark #1535-D: (ULP 8.1) variable "uk1" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../pidctl.c", line 24: remark #1535-D: (ULP 8.1) variable "adjust" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../pidctl.c", line 27: remark #1535-D: (ULP 8.1) variable "ddisduty" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../pidctl.c", line 29: remark #1535-D: (ULP 8.1) variable "tspeed" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../pidctl.c", line 30: remark #1535-D: (ULP 8.1) variable "freq_bef" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../pidctl.c", line 39: remark #1535-D: (ULP 8.1) variable "average_bef" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../pidctl.c'
+' '
+'Building target: shuyebeng.out'
+'Invoking: MSP430 Linker'
+"C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --advice:power=all -g --define=__MSP430F5438A__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal -z -m"shuyebeng.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"C:/ti/ccsv6/ccs_base/msp430/include" -i"C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/lib" -i"C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/include" -i"C:/ti/ccsv6/ccs_base/msp430/lib/5xx_6xx_FRxx" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="shuyebeng_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "shuyebeng.out" "./adtransfer.obj" "./clc_Init.obj" "./clock.obj" "./fourkey.obj" "./keyscan.obj" "./lcddisplay.obj" "./main.obj" "./pidctl.obj" "./pwm.obj" "../lnk_msp430f5438a.cmd"  -l"libmath.a" -l"libc.a" 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port E in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port F in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+'Finished building target: shuyebeng.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project shuyebeng ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+gmake: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project shuyebeng ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+gmake: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project shuyebeng ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+gmake: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project shuyebeng ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+gmake: Nothing to be done for `all'.
+
+**** Build Finished ****

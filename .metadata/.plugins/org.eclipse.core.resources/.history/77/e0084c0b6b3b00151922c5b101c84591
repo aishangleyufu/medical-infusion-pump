@@ -1,0 +1,22 @@
+/*
+ * lcddisplay.h
+ *
+ *  Created on: 2015Äê7ÔÂ29ÈÕ
+ *      Author: c
+ */
+
+#ifndef LCDDISPLAY_H_
+#define LCDDISPLAY_H_
+#define uchar unsigned char
+extern void busy_lcd(void);
+extern void wr_lcd(uchar DATA,uchar flog);
+extern void lcd_Init(void);
+extern void clc_lcd(void);
+extern void gotoxy(unsigned char y, unsigned char x);
+extern void showstr(uchar *str);
+extern void displayspeed(void);
+extern unsigned int average;
+extern unsigned int act_time;
+extern unsigned int set_average;
+#endif /* LCDDISPLAY_H_ */
+

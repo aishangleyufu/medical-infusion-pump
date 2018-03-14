@@ -1,0 +1,150 @@
+//******************************************************************************
+//   Interfacing ADS1118 with MSP430F543xA - USCI_B1, SPI 3-Wire Master Demo
+//
+//   Description: SPI master talks to SPI slave using 3-wire mode. Config_Reg
+//   value 0x058B is sent by the master. Received data is stored in an array
+//   Data[i].
+//   ACLK = ~32.768kHz, MCLK = SMCLK = DCO ~ 1048kHz.  BRCLK = SMCLK/2
+//
+//
+//                   MSP430F5438A
+//                 -----------------
+//             /|\|                 |
+//              | |                 |
+//              --|RST              |
+//                |                 |
+//                |             P3.7|-> Data Out (UCB1SIMO)
+//                |                 |
+//                |             P5.4|<- Data In (UCB1SOMI)
+//                |                 |
+//  		\CS <-|P1.1         P5.5|-> Serial Clock Out (UCB1CLK)
+//
+//
+//   Shuyang Zhong
+//   U-Program China, Texas Instruments Inc.
+//   Mar 2013
+//   Built with CCE Version: 5.1.1
+//******************************************************************************
+
+#include "msp430x54xA.h"
+
+void GPIO2_Init(void);
+void SPI_Init(void);
+void ADS_Config(void);
+int ADS_Read(void);
+signed int WriteSPI(unsigned int Config, unsigned char mode);
+
+void kkk(void)
+{
+
+	volatile int ADC_Result;
+
+	WDTCTL = WDTPW+WDTHOLD;                 // Stop watchdog timer
+
+	GPIO2_Init();
+	SPI_Init();
+	ADS_Config();
+	while(1)
+	{
+		ADC_Result = 2*ADS_Read();			// Read data from ADS1118
+                if(ADC_Result>100) P5OUT &= ~BIT0;
+                else P5OUT |= BIT0;
+		//P1OUT = P1OUT;
+	}
+}
+
+void GPIO2_Init(void)
+{
+	P1OUT |= 0x02;                         // Set P1.1 for CS
+	P1DIR |= 0x02;                          // Set P1.1 to output direction
+	P3SEL |= 0x80;                          // P3.7 option select
+	P5SEL |= 0x30;							// P5.4,5 option select
+        P5DIR |= BIT0;                          // P5.0 Output
+        P5OUT |= BIT0;                          // P5.0 Output High
+}
+
+void SPI_Init(void)
+{
+	UCB1CTL1 |= UCSWRST;                    // **Put state machine in reset**
+	UCB1CTL0 |= UCMST+UCSYNC+UCCKPH+UCMSB;  // 3-pin, 8-bit SPI master
+	                                        // Clock polarity high, MSB
+	UCB1CTL1 |= UCSSEL_2;                   // SMCLK
+	UCB1BR0 = 200;                         // /2
+	UCB1BR1 = 1;                            //
+	UCB1CTL1 &= ~UCSWRST;                   // **Initialize USCI state machine**
+
+	__delay_cycles(100);                    // Wait for slave to initialize
+}
+
+void ADS_Config(void)
+{
+	signed int Config_Value;
+	Config_Value = 0x85E3;					// Initial Config Register
+	// ADS1118 configuration AIN0/AIN1, FS=+/-2.048, DR=128sps, PULLUP on DOUT
+
+	P1OUT &=~ 0x02;							// Set CS low
+	WriteSPI(Config_Value,0);				// Write configuration to ADS1118
+	P1OUT |= 0x02;							// Set CS high
+}
+
+int ADS_Read(void)
+{
+	unsigned int Data, Config_Value;
+
+	Config_Value = 0x85E3;
+	// ADS1118 configuration AIN0/AIN1, FS=+/-2.048, DR=128sps, PULLUP on DOUT
+
+	P1OUT &=~ 0x02;							// Set CS low
+	Data = WriteSPI(Config_Value,1);		// Read data from ADS1118
+	P1OUT |= 0x02;							// Set CS high
+
+	return Data;
+}
+
+/*
+ * Mode 0: Only write config register to ADS1118
+ * Mode 1: Write config register to ADS1118 as well as read data from ADS1118
+ */
+signed int WriteSPI(unsigned int config, unsigned char mode)
+{
+	signed int msb;
+	unsigned int temp;
+	volatile signed int dummy;
+
+	temp = config;
+	if (mode==1) temp = config | 0x8000;
+
+	while(!(UCB1IFG&UCTXIFG));
+	UCB1TXBUF = (temp >> 8 );				// Write MSB of Config
+	while(!(UCB1IFG&UCRXIFG));
+	msb = UCB1RXBUF;						// Read MSB of Data
+
+	while(!(UCB1IFG&UCTXIFG));
+	UCB1TXBUF = (temp & 0xff);				// Write LSB of Config
+	while(!(UCB1IFG&UCRXIFG));
+	msb = (msb << 8) | UCB1RXBUF;			// Read LSB of Data
+
+	while(!(UCB1IFG&UCTXIFG));
+	UCB1TXBUF = (temp >> 8 );				// Write MSB of Config
+	while(!(UCB1IFG&UCRXIFG));
+	dummy = UCB1RXBUF;						// Read MSB of Config
+
+
+	while(!(UCB1IFG&UCTXIFG));
+	UCB1TXBUF= (temp & 0xff);				// Write LSB of Config
+	while(!(UCB1IFG&UCRXIFG));
+	dummy = (dummy <<8) | UCB1RXBUF;		// Read LSB of Config
+
+	__delay_cycles(100);
+
+	return msb;
+}
+
+
+
+
+
+
+
+
+

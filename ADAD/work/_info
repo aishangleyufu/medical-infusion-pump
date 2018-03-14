@@ -1,0 +1,252 @@
+m255
+13
+cModel Technology
+dC:\3130103382\ADAD\ADAD
+Eadtransfer
+w1439149893
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+FC:/3130103382/ADAD/ADAD/adtransfer.vhd
+l0
+L31
+VL2knN=UPa?QMTOACI7<j=2
+OE;C;6.1f;31
+32
+o-work work
+tExplicit 1 GenerateLoopIterationMax 100000
+Abehavioral
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work adtransfer L2knN=UPa?QMTOACI7<j=2
+l41
+L39
+V7RA4IY[[Rg9F7Hc5G;E2A0
+OE;C;6.1f;31
+32
+M3 ieee std_logic_1164
+M2 ieee std_logic_arith
+M1 ieee std_logic_unsigned
+o-work work
+tExplicit 1 GenerateLoopIterationMax 100000
+Eadtransfer_test_vhd
+w1439146603
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+FC:/3130103382/ADAD/ADAD/adtransfer_test.vhd
+l0
+L35
+VA4Ae2OYj^DkJCFcRzNi?B3
+OE;C;6.1f;31
+32
+o-work work
+tExplicit 1 GenerateLoopIterationMax 100000
+Abehavior
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work adtransfer_test_vhd A4Ae2OYj^DkJCFcRzNi?B3
+l58
+L38
+VPCUYnnHMiabi3PAg@hOnC0
+OE;C;6.1f;31
+32
+M4 ieee std_logic_1164
+M3 ieee std_logic_unsigned
+M2 ieee std_logic_arith
+M1 ieee numeric_std
+o-work work
+tExplicit 1 GenerateLoopIterationMax 100000
+Ebcd_test_vhd
+w1437998168
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+FC:/3130103382/ADAD/ADAD/bcd_test.vhd
+l0
+L35
+VkZVU??MPRedYXAI4gJ>2f3
+OE;C;6.1f;31
+32
+o-work work
+tExplicit 1 GenerateLoopIterationMax 100000
+Abehavior
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work bcd_test_vhd kZVU??MPRedYXAI4gJ>2f3
+l54
+L38
+V?ki<If`J4_D`HDa6WXR8N3
+OE;C;6.1f;31
+32
+M4 ieee std_logic_1164
+M3 ieee std_logic_unsigned
+M2 ieee std_logic_arith
+M1 ieee numeric_std
+o-work work
+tExplicit 1 GenerateLoopIterationMax 100000
+Ebcdcode
+w1437998993
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+FC:/3130103382/ADAD/ADAD/bcdcode.vhd
+l0
+L30
+VN1HRM_KC9i4]HzIFHFWGM2
+OE;C;6.1f;31
+32
+o-work work
+tExplicit 1 GenerateLoopIterationMax 100000
+Abehavioral
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work bcdcode N1HRM_KC9i4]HzIFHFWGM2
+l37
+L35
+V5z@nHkV]8F80X6PzggCaP0
+OE;C;6.1f;31
+32
+M3 ieee std_logic_1164
+M2 ieee std_logic_arith
+M1 ieee std_logic_unsigned
+o-work work
+tExplicit 1 GenerateLoopIterationMax 100000
+Echuanbin1
+w1439133696
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+FC:/3130103382/ADAD/ADAD/chuanbin1.vhd
+l0
+L30
+V>m9mQcBf_CV^<CaQY]jLA1
+OE;C;6.1f;31
+32
+o-work work
+tExplicit 1 GenerateLoopIterationMax 100000
+Abehavioral
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work chuanbin1 >m9mQcBf_CV^<CaQY]jLA1
+l48
+L36
+VEHkjkRa7WK[?ae`6W`[Ui1
+OE;C;6.1f;31
+32
+M3 ieee std_logic_1164
+M2 ieee std_logic_arith
+M1 ieee std_logic_unsigned
+o-work work
+tExplicit 1 GenerateLoopIterationMax 100000
+Echuanbin1_test_vhd
+w1439134015
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+FC:/3130103382/ADAD/ADAD/chuanbin1_test.vhd
+l0
+L34
+VBc2e9E8?^g9c>N=S<59UC0
+OE;C;6.1f;31
+32
+o-work work
+tExplicit 1 GenerateLoopIterationMax 100000
+Abehavior
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work chuanbin1_test_vhd Bc2e9E8?^g9c>N=S<59UC0
+l55
+L37
+V@P:GUQ71OQEZ0;SUgLFAZ3
+OE;C;6.1f;31
+32
+M4 ieee std_logic_1164
+M3 ieee std_logic_unsigned
+M2 ieee std_logic_arith
+M1 ieee numeric_std
+o-work work
+tExplicit 1 GenerateLoopIterationMax 100000
+Efenping2
+w1439093816
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+FC:/3130103382/ADAD/ADAD/fenping2.vhd
+l0
+L30
+VQG?03iT?3<mhOEk9mE76>0
+OE;C;6.1f;31
+32
+o-work work
+tExplicit 1 GenerateLoopIterationMax 100000
+Abehavioral
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work fenping2 QG?03iT?3<mhOEk9mE76>0
+l40
+L37
+V<IieDMSX]c36TLQ13l^=61
+OE;C;6.1f;31
+32
+M3 ieee std_logic_1164
+M2 ieee std_logic_arith
+M1 ieee std_logic_unsigned
+o-work work
+tExplicit 1 GenerateLoopIterationMax 100000
+Efenping2test_vhd
+w1439093164
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+FC:/3130103382/ADAD/ADAD/fenping2test.vhd
+l0
+L34
+VM_zEh7_ACW8J<5;fiMKRM2
+OE;C;6.1f;31
+32
+o-work work
+tExplicit 1 GenerateLoopIterationMax 100000
+Abehavior
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work fenping2test_vhd M_zEh7_ACW8J<5;fiMKRM2
+l55
+L37
+VZb1cH`HGIaLBB@69i>27T2
+OE;C;6.1f;31
+32
+M4 ieee std_logic_1164
+M3 ieee std_logic_unsigned
+M2 ieee std_logic_arith
+M1 ieee numeric_std
+o-work work
+tExplicit 1 GenerateLoopIterationMax 100000
+Etestbench
+w1439131574
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+FC:/3130103382/ADAD/ADAD/chuanbin1test.vhd
+l0
+L7
+Voa?N1KjaUhYDR>4Q6A=Yd1
+OE;C;6.1f;31
+32
+o-work work
+tExplicit 1 GenerateLoopIterationMax 100000

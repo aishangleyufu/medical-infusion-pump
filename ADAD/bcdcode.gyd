@@ -1,0 +1,24 @@
+Pin Freeze File:  version I.31
+
+A2C32A44VQ XA2C32A-6-VQ44
+d<0> S:PIN30
+d<1> S:PIN29
+d<2> S:PIN28
+d<3> S:PIN27
+bcd_code<0> S:PIN36
+bcd_code<1> S:PIN38
+bcd_code<2> S:PIN31
+bcd_code<3> S:PIN34
+bcd_code<4> S:PIN37
+bcd_code<5> S:PIN32
+bcd_code<6> S:PIN33
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 bcd_code<1> bcd_code<4> bcd_code<0> bcd_code<3>
+		 bcd_code<6> bcd_code<5> bcd_code<2>
+PARTITION FB1_16 N_PZ_13
+
+

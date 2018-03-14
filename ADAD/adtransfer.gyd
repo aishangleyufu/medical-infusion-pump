@@ -1,0 +1,99 @@
+Pin Freeze File:  version I.31
+
+A2C256100 XA2C256-7-VQ100
+date<0> S:PIN3
+date<1> S:PIN4
+date<2> S:PIN6
+date<3> S:PIN7
+date<4> S:PIN95
+date<5> S:PIN37
+date<6> S:PIN94
+date<7> S:PIN73
+date<8> S:PIN90
+date<9> S:PIN72
+date<10> S:PIN92
+date<11> S:PIN91
+B<0> S:PIN2
+B<1> S:PIN23
+B<2> S:PIN22
+B<3> S:PIN1
+B<4> S:PIN81
+B<5> S:PIN32
+B<6> S:PIN33
+B<7> S:PIN77
+B<8> S:PIN76
+B<9> S:PIN74
+B<10> S:PIN93
+B<11> S:PIN10
+h1<0> S:PIN82
+h1<1> S:PIN34
+h1<2> S:PIN35
+h1<3> S:PIN36
+h2<0> S:PIN99
+h2<1> S:PIN80
+h2<2> S:PIN79
+h2<3> S:PIN78
+h3<0> S:PIN8
+h3<1> S:PIN9
+h3<2> S:PIN97
+h3<3> S:PIN96
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 N_PZ_155 N_PZ_53 h2<0> Mmult__mult0007_Mmult__mult0000__index0005
+		 Mmult__mult0007_Mmult__mult0000__or0005 h3<2> Mmult__mult0007_Mmult__mult0000__index0006 Mmult__mult0007_Mmult__mult0000__index0004
+		 Mmult__mult0007__mux0000<9> Mmult__mult0007__mux0000<8> N_PZ_97 h3<3>
+		
+PARTITION FB1_15 _mult0007<11> N_PZ_427
+PARTITION FB2_1 B<3>
+PARTITION FB2_3 B<0>
+PARTITION FB2_8 N_PZ_337 N_PZ_311 Mmult__mult0000__or0005 Mmult__mult0000__index0006
+		
+PARTITION FB2_13 Mmult__mult0000__index0005
+PARTITION FB2_16 Mmult__mult0000__or0010
+PARTITION FB3_1 Msub__addsub0000__xor0010 _mult0000<20> Mmult__mult0000__index0009 _mult0000<19>
+		 B<10> _mult0000<18> Mmult__mult0000__index0010 Mmult__mult0000__index0020
+		 Mmult__mult0000__or0018 Mmult__mult0000__index0021 _mult0000<17>
+PARTITION FB3_13 N_PZ_111
+PARTITION FB3_15 N_PZ_43
+
+PARTITION FB4_1 h3<0> h3<1> B<11>
+PARTITION FB4_7 _addsub0000<6> Msub__addsub0000__or0008 _addsub0000<8> N_PZ_278
+		 N_PZ_175 N_PZ_78
+PARTITION FB4_14 _addsub0000<5> _addsub0000<4> Msub__addsub0000__or0005
+PARTITION FB5_2 N_PZ_179 Mmult__mult0000__index0007 B<1> N_PZ_89
+		 B<2> Mmult__mult0000__or0016 Mmult__mult0000__index0019 Mmult__mult0000__index0018
+		 N_PZ_416 N_PZ_52 N_PZ_269 N_PZ_324
+		 Mmult__mult0000__index0016 Mmult__mult0000__or0013 Mmult__mult0000__or0021
+PARTITION FB6_1 N_PZ_84
+PARTITION FB6_3 N_PZ_162
+PARTITION FB6_5 Mmult__mult0007_Mmult__mult0000__index0003 N_PZ_102 N_PZ_54 N_PZ_47
+		 N_PZ_75 N_PZ_70 Mmult__mult0007_Mmult__mult0000__index0012 Mmult__mult0007_Mmult__mult0000__or0011
+		 Mmult__mult0007_Mmult__mult0000__or0009 N_PZ_107 Mmult__mult0007_Mmult__mult0000__or0017 Mmult__mult0007_Mmult__mult0000__or0018
+		
+PARTITION FB7_1 Mmult__mult0007__mult0000<11> _mult0007<16> N_PZ_68 N_PZ_153
+		
+PARTITION FB7_6 Mmult__mult0007_Mmult__mult0000__or0012 N_PZ_88 Mmult__mult0007_Mmult__mult0000__or0014 Mmult__mult0007_Mmult__mult0000__index0017
+		 Mmult__mult0007_Mmult__mult0000__index0008 N_PZ_51 N_PZ_275 N_PZ_271
+		 Mmult__mult0007__mult0000<13> N_PZ_315 Mmult__mult0007_Mmult__mult0000__index0016
+PARTITION FB8_1 N_PZ_174 Mmult__mult0000__or0022 N_PZ_161 N_PZ_283
+		 _addsub0002<3> B<5> Msub__addsub0000_Mxor_Result<2>__xor0000 N_PZ_302
+		 _mult0000<13> Mmult__mult0000__or0025 B<6> h1<1>
+		 h1<2> h1<3> N_PZ_42 Msub__addsub0000__xor0005
+		
+PARTITION FB9_1 h2<3> h2<2> Mmult__mult0007_Mmult__mult0000__index0013 h2<1>
+		 Mmult__mult0000__index0008 B<4> N_PZ_57 N_PZ_58
+		 N_PZ_180 Mmult__mult0007__mux0000<7> N_PZ_270 h1<0>
+		 Mmult__mult0007__mult0000<10> Mmult__mult0007_Mmult__mult0000__index0014 Mmult__mult0007__mux0000<6> _mult0007<12>
+		
+PARTITION FB10_1 B<7> B<8> B<9>
+PARTITION FB10_15 N_PZ_171 Mmult__mult0007_Mmult__mult0000__index0015
+
+
+
+
+
+
+

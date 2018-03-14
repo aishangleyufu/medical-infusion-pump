@@ -1,0 +1,47 @@
+Pin Freeze File:  version I.31
+
+A2C64A44VQ XA2C64A-7-VQ44
+F50M S:PIN43
+din S:PIN38
+pdate<0> S:PIN39
+pdate<1> S:PIN21
+pdate<2> S:PIN20
+pdate<3> S:PIN19
+pdate<4> S:PIN18
+pdate<5> S:PIN5
+pdate<6> S:PIN6
+pdate<7> S:PIN8
+pdate<8> S:PIN12
+pdate<9> S:PIN13
+pdate<10> S:PIN40
+pdate<11> S:PIN29
+pdate<12> S:PIN28
+pdate<13> S:PIN27
+pdate<14> S:PIN23
+pdate<15> S:PIN22
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 pdate_tmp<0> pdate_tmp<8> pdate_tmp<7> pdate_tmp<1>
+		 pdate_tmp<15> pdate_tmp<14> pdate_tmp<13> pdate_tmp<12>
+		 pdate_tmp<6> pdate_tmp<5> pdate_tmp<4> pdate_tmp<3>
+		 pdate_tmp<2> pdate_tmp<11> pdate_tmp<10> i<3>
+		
+PARTITION FB2_1 pdate<0> pdate<10> u0/cnt500<0> u0/cnt500<3>
+		 u0/SCLK_TMP u0/cnt500<8> u0/cnt500<7> u0/cnt500<6>
+		 u0/cnt500<1> u0/cnt500<5> pdate_tmp<9> u0/cnt500<4>
+		 u0/cnt500<2> i<2> i<1> i<0>
+		
+PARTITION FB3_1 pdate<11> pdate<12> pdate<13>
+PARTITION FB3_5 CS pdate<14> u0/cnt18<1> u0/cnt18<4>
+		 u0/cnt18<0> pdate<15> pdate<1> pdate<2>
+		 u0/cnt18<3> pdate<3> pdate<4> u0/cnt18<2>
+		
+PARTITION FB4_1 pdate<5> pdate<6>
+PARTITION FB4_7 pdate<7>
+PARTITION FB4_11 pdate<8>
+PARTITION FB4_13 pdate<9>
+
+

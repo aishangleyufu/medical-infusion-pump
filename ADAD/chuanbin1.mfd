@@ -1,0 +1,607 @@
+MDF Database:  version 1.0
+MDF_INFO | chuanbin1 | XA2C64A-7-VQ44
+MACROCELL | 1 | 0 | pdate<0>_MC
+ATTRIBUTES | 142869314 | 0
+INPUTS | 2 | pdate_tmp<0>  | CS
+INPUTMC | 2 | 0 | 0 | 2 | 4
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate<0> := pdate_tmp<0>;	// (1 pt, 1 inp)
+    pdate<0>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate<0>.CE = CS;	// (1 pt, 1 inp)
+
+MACROCELL | 0 | 0 | pdate_tmp<0>_MC
+ATTRIBUTES | 2290090048 | 4
+OUTPUTMC | 1 | 1 | 0
+INPUTS | 5 | CS  | i<0>  | i<1>  | i<2>  | i<3>
+INPUTMC | 5 | 2 | 4 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 15
+LCT | 1 | 2 | Internal_Name
+EQ | 5 | 
+   
+// Direct Input Register
+pdate_tmp<0> := din;	// (0 pt, 0 inp)
+    pdate_tmp<0>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate_tmp<0>.CE = !CS & i<0> & i<1> & i<2> & i<3>;	// (1 pt, 5 inp)
+
+MACROCELL | 2 | 4 | CS_MC
+ATTRIBUTES | 2155873056 | 0
+OUTPUTMC | 36 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 15 | 0 | 0 | 1 | 0 | 0 | 14 | 1 | 1 | 0 | 13 | 2 | 0 | 0 | 7 | 2 | 1 | 0 | 6 | 2 | 2 | 0 | 5 | 2 | 5 | 0 | 4 | 2 | 9 | 0 | 3 | 2 | 10 | 0 | 12 | 2 | 11 | 0 | 11 | 2 | 13 | 0 | 10 | 2 | 14 | 0 | 9 | 3 | 0 | 0 | 8 | 3 | 1 | 0 | 2 | 3 | 6 | 0 | 1 | 3 | 10 | 1 | 10 | 3 | 12
+INPUTS | 5 | u0/cnt18<1>  | u0/cnt18<2>  | u0/cnt18<3>  | u0/cnt18<4>  | u0/SCLK_TMP
+INPUTMC | 5 | 2 | 6 | 2 | 15 | 2 | 12 | 2 | 7 | 1 | 4
+EQ | 3 | 
+   CS := !u0/cnt18<1> & !u0/cnt18<2> & !u0/cnt18<3> & 
+	!u0/cnt18<4>;	// (1 pt, 4 inp)
+    CS.CLK = u0/SCLK_TMP;	// PTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 6 | u0/cnt18<1>_MC
+ATTRIBUTES | 2151678752 | 0
+OUTPUTMC | 6 | 2 | 15 | 2 | 12 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 4
+INPUTS | 6 | u0/cnt18<0>  | u0/cnt18<1>  | u0/cnt18<2>  | u0/cnt18<3>  | u0/cnt18<4>  | u0/SCLK_TMP
+INPUTMC | 6 | 2 | 8 | 2 | 6 | 2 | 15 | 2 | 12 | 2 | 7 | 1 | 4
+EQ | 4 | 
+   u0/cnt18<1>.T := u0/cnt18<0>
+	# u0/cnt18<1> & !u0/cnt18<2> & !u0/cnt18<3> & 
+	u0/cnt18<4>;	// (2 pt, 5 inp)
+    u0/cnt18<1>.CLK = u0/SCLK_TMP;	// PTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 8 | u0/cnt18<0>_MC
+ATTRIBUTES | 2151678752 | 0
+OUTPUTMC | 5 | 2 | 15 | 2 | 12 | 2 | 7 | 2 | 8 | 2 | 6
+INPUTS | 6 | u0/cnt18<1>  | u0/cnt18<0>  | u0/cnt18<2>  | u0/cnt18<3>  | u0/cnt18<4>  | u0/SCLK_TMP
+INPUTMC | 6 | 2 | 6 | 2 | 8 | 2 | 15 | 2 | 12 | 2 | 7 | 1 | 4
+EQ | 3 | 
+   !u0/cnt18<0>.T := u0/cnt18<1> & !u0/cnt18<0> & !u0/cnt18<2> & 
+	!u0/cnt18<3> & u0/cnt18<4>;	// (1 pt, 5 inp)
+    u0/cnt18<0>.CLK = u0/SCLK_TMP;	// PTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 15 | u0/cnt18<2>_MC
+ATTRIBUTES | 2151678752 | 0
+OUTPUTMC | 5 | 2 | 12 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 4
+INPUTS | 3 | u0/cnt18<1>  | u0/cnt18<0>  | u0/SCLK_TMP
+INPUTMC | 3 | 2 | 6 | 2 | 8 | 1 | 4
+EQ | 2 | 
+   u0/cnt18<2>.T := u0/cnt18<1> & u0/cnt18<0>;	// (1 pt, 2 inp)
+    u0/cnt18<2>.CLK = u0/SCLK_TMP;	// PTC	(1 pt, 1 inp)
+
+MACROCELL | 1 | 4 | u0/SCLK_TMP_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 6 | 2 | 15 | 2 | 12 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 4
+INPUTS | 8 | u0/cnt500<8>  | u0/cnt500<1>  | u0/cnt500<3>  | u0/cnt500<4>  | u0/cnt500<5>  | u0/cnt500<6>  | u0/cnt500<7>  | u0/cnt500<2>
+INPUTMC | 8 | 1 | 5 | 1 | 8 | 1 | 3 | 1 | 11 | 1 | 9 | 1 | 7 | 1 | 6 | 1 | 12
+EQ | 6 | 
+   u0/SCLK_TMP := u0/cnt500<8>
+	# u0/cnt500<1> & u0/cnt500<3> & u0/cnt500<4> & 
+	u0/cnt500<5> & u0/cnt500<6> & u0/cnt500<7>
+	# u0/cnt500<2> & u0/cnt500<3> & u0/cnt500<4> & 
+	u0/cnt500<5> & u0/cnt500<6> & u0/cnt500<7>;	// (3 pt, 8 inp)
+   u0/SCLK_TMP.CLK  =  F50M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | F50M
+
+MACROCELL | 1 | 8 | u0/cnt500<1>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 9 | 1 | 3 | 1 | 5 | 1 | 6 | 1 | 7 | 1 | 9 | 1 | 11 | 1 | 12 | 1 | 2 | 1 | 4
+INPUTS | 1 | u0/cnt500<0>
+INPUTMC | 1 | 1 | 2
+EQ | 2 | 
+   u0/cnt500<1>.T := u0/cnt500<0>;	// (1 pt, 1 inp)
+   u0/cnt500<1>.CLK  =  F50M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | F50M
+
+MACROCELL | 1 | 2 | u0/cnt500<0>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 9 | 1 | 3 | 1 | 5 | 1 | 6 | 1 | 7 | 1 | 9 | 1 | 11 | 1 | 12 | 1 | 2 | 1 | 8
+INPUTS | 9 | u0/cnt500<1>  | u0/cnt500<0>  | u0/cnt500<2>  | u0/cnt500<3>  | u0/cnt500<4>  | u0/cnt500<5>  | u0/cnt500<6>  | u0/cnt500<7>  | u0/cnt500<8>
+INPUTMC | 9 | 1 | 8 | 1 | 2 | 1 | 12 | 1 | 3 | 1 | 11 | 1 | 9 | 1 | 7 | 1 | 6 | 1 | 5
+EQ | 4 | 
+   !u0/cnt500<0>.T := !u0/cnt500<1> & !u0/cnt500<0> & u0/cnt500<2> & 
+	!u0/cnt500<3> & u0/cnt500<4> & u0/cnt500<5> & u0/cnt500<6> & 
+	u0/cnt500<7> & u0/cnt500<8>;	// (1 pt, 9 inp)
+   u0/cnt500<0>.CLK  =  F50M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | F50M
+
+MACROCELL | 1 | 12 | u0/cnt500<2>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 9 | 1 | 3 | 1 | 5 | 1 | 6 | 1 | 7 | 1 | 9 | 1 | 11 | 1 | 12 | 1 | 2 | 1 | 4
+INPUTS | 9 | u0/cnt500<1>  | u0/cnt500<0>  | u0/cnt500<2>  | u0/cnt500<3>  | u0/cnt500<4>  | u0/cnt500<5>  | u0/cnt500<6>  | u0/cnt500<7>  | u0/cnt500<8>
+INPUTMC | 9 | 1 | 8 | 1 | 2 | 1 | 12 | 1 | 3 | 1 | 11 | 1 | 9 | 1 | 7 | 1 | 6 | 1 | 5
+EQ | 5 | 
+   u0/cnt500<2>.T := u0/cnt500<1> & u0/cnt500<0>
+	# !u0/cnt500<1> & !u0/cnt500<0> & u0/cnt500<2> & 
+	!u0/cnt500<3> & u0/cnt500<4> & u0/cnt500<5> & u0/cnt500<6> & 
+	u0/cnt500<7> & u0/cnt500<8>;	// (2 pt, 9 inp)
+   u0/cnt500<2>.CLK  =  F50M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | F50M
+
+MACROCELL | 1 | 3 | u0/cnt500<3>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 8 | 1 | 5 | 1 | 6 | 1 | 7 | 1 | 9 | 1 | 11 | 1 | 12 | 1 | 2 | 1 | 4
+INPUTS | 3 | u0/cnt500<1>  | u0/cnt500<0>  | u0/cnt500<2>
+INPUTMC | 3 | 1 | 8 | 1 | 2 | 1 | 12
+EQ | 2 | 
+   u0/cnt500<3>.T := u0/cnt500<1> & u0/cnt500<0> & u0/cnt500<2>;	// (1 pt, 3 inp)
+   u0/cnt500<3>.CLK  =  F50M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | F50M
+
+MACROCELL | 1 | 11 | u0/cnt500<4>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 8 | 1 | 5 | 1 | 6 | 1 | 7 | 1 | 9 | 1 | 11 | 1 | 12 | 1 | 2 | 1 | 4
+INPUTS | 9 | u0/cnt500<1>  | u0/cnt500<0>  | u0/cnt500<2>  | u0/cnt500<3>  | u0/cnt500<4>  | u0/cnt500<5>  | u0/cnt500<6>  | u0/cnt500<7>  | u0/cnt500<8>
+INPUTMC | 9 | 1 | 8 | 1 | 2 | 1 | 12 | 1 | 3 | 1 | 11 | 1 | 9 | 1 | 7 | 1 | 6 | 1 | 5
+EQ | 6 | 
+   u0/cnt500<4>.T := u0/cnt500<1> & u0/cnt500<0> & u0/cnt500<2> & 
+	u0/cnt500<3>
+	# !u0/cnt500<1> & !u0/cnt500<0> & u0/cnt500<2> & 
+	!u0/cnt500<3> & u0/cnt500<4> & u0/cnt500<5> & u0/cnt500<6> & 
+	u0/cnt500<7> & u0/cnt500<8>;	// (2 pt, 9 inp)
+   u0/cnt500<4>.CLK  =  F50M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | F50M
+
+MACROCELL | 1 | 9 | u0/cnt500<5>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 8 | 1 | 5 | 1 | 6 | 1 | 7 | 1 | 9 | 1 | 11 | 1 | 12 | 1 | 2 | 1 | 4
+INPUTS | 9 | u0/cnt500<1>  | u0/cnt500<0>  | u0/cnt500<2>  | u0/cnt500<3>  | u0/cnt500<4>  | u0/cnt500<5>  | u0/cnt500<6>  | u0/cnt500<7>  | u0/cnt500<8>
+INPUTMC | 9 | 1 | 8 | 1 | 2 | 1 | 12 | 1 | 3 | 1 | 11 | 1 | 9 | 1 | 7 | 1 | 6 | 1 | 5
+EQ | 6 | 
+   u0/cnt500<5>.T := u0/cnt500<1> & u0/cnt500<0> & u0/cnt500<2> & 
+	u0/cnt500<3> & u0/cnt500<4>
+	# !u0/cnt500<1> & !u0/cnt500<0> & u0/cnt500<2> & 
+	!u0/cnt500<3> & u0/cnt500<4> & u0/cnt500<5> & u0/cnt500<6> & 
+	u0/cnt500<7> & u0/cnt500<8>;	// (2 pt, 9 inp)
+   u0/cnt500<5>.CLK  =  F50M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | F50M
+
+MACROCELL | 1 | 7 | u0/cnt500<6>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 8 | 1 | 5 | 1 | 6 | 1 | 7 | 1 | 9 | 1 | 11 | 1 | 12 | 1 | 2 | 1 | 4
+INPUTS | 9 | u0/cnt500<1>  | u0/cnt500<0>  | u0/cnt500<2>  | u0/cnt500<3>  | u0/cnt500<4>  | u0/cnt500<5>  | u0/cnt500<6>  | u0/cnt500<7>  | u0/cnt500<8>
+INPUTMC | 9 | 1 | 8 | 1 | 2 | 1 | 12 | 1 | 3 | 1 | 11 | 1 | 9 | 1 | 7 | 1 | 6 | 1 | 5
+EQ | 6 | 
+   u0/cnt500<6>.T := u0/cnt500<1> & u0/cnt500<0> & u0/cnt500<2> & 
+	u0/cnt500<3> & u0/cnt500<4> & u0/cnt500<5>
+	# !u0/cnt500<1> & !u0/cnt500<0> & u0/cnt500<2> & 
+	!u0/cnt500<3> & u0/cnt500<4> & u0/cnt500<5> & u0/cnt500<6> & 
+	u0/cnt500<7> & u0/cnt500<8>;	// (2 pt, 9 inp)
+   u0/cnt500<6>.CLK  =  F50M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | F50M
+
+MACROCELL | 1 | 6 | u0/cnt500<7>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 8 | 1 | 5 | 1 | 6 | 1 | 7 | 1 | 9 | 1 | 11 | 1 | 12 | 1 | 2 | 1 | 4
+INPUTS | 9 | u0/cnt500<1>  | u0/cnt500<0>  | u0/cnt500<2>  | u0/cnt500<3>  | u0/cnt500<4>  | u0/cnt500<5>  | u0/cnt500<6>  | u0/cnt500<7>  | u0/cnt500<8>
+INPUTMC | 9 | 1 | 8 | 1 | 2 | 1 | 12 | 1 | 3 | 1 | 11 | 1 | 9 | 1 | 7 | 1 | 6 | 1 | 5
+EQ | 6 | 
+   u0/cnt500<7>.T := u0/cnt500<1> & u0/cnt500<0> & u0/cnt500<2> & 
+	u0/cnt500<3> & u0/cnt500<4> & u0/cnt500<5> & u0/cnt500<6>
+	# !u0/cnt500<1> & !u0/cnt500<0> & u0/cnt500<2> & 
+	!u0/cnt500<3> & u0/cnt500<4> & u0/cnt500<5> & u0/cnt500<6> & 
+	u0/cnt500<7> & u0/cnt500<8>;	// (2 pt, 9 inp)
+   u0/cnt500<7>.CLK  =  F50M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | F50M
+
+MACROCELL | 1 | 5 | u0/cnt500<8>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 8 | 1 | 5 | 1 | 6 | 1 | 7 | 1 | 9 | 1 | 11 | 1 | 12 | 1 | 2 | 1 | 4
+INPUTS | 9 | u0/cnt500<1>  | u0/cnt500<0>  | u0/cnt500<2>  | u0/cnt500<3>  | u0/cnt500<4>  | u0/cnt500<5>  | u0/cnt500<6>  | u0/cnt500<7>  | u0/cnt500<8>
+INPUTMC | 9 | 1 | 8 | 1 | 2 | 1 | 12 | 1 | 3 | 1 | 11 | 1 | 9 | 1 | 7 | 1 | 6 | 1 | 5
+EQ | 7 | 
+   u0/cnt500<8>.T := u0/cnt500<1> & u0/cnt500<0> & u0/cnt500<2> & 
+	u0/cnt500<3> & u0/cnt500<4> & u0/cnt500<5> & u0/cnt500<6> & 
+	u0/cnt500<7>
+	# !u0/cnt500<1> & !u0/cnt500<0> & u0/cnt500<2> & 
+	!u0/cnt500<3> & u0/cnt500<4> & u0/cnt500<5> & u0/cnt500<6> & 
+	u0/cnt500<7> & u0/cnt500<8>;	// (2 pt, 9 inp)
+   u0/cnt500<8>.CLK  =  F50M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | F50M
+
+MACROCELL | 2 | 12 | u0/cnt18<3>_MC
+ATTRIBUTES | 2151678752 | 0
+OUTPUTMC | 4 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 4
+INPUTS | 4 | u0/cnt18<1>  | u0/cnt18<0>  | u0/cnt18<2>  | u0/SCLK_TMP
+INPUTMC | 4 | 2 | 6 | 2 | 8 | 2 | 15 | 1 | 4
+EQ | 2 | 
+   u0/cnt18<3>.T := u0/cnt18<1> & u0/cnt18<0> & u0/cnt18<2>;	// (1 pt, 3 inp)
+    u0/cnt18<3>.CLK = u0/SCLK_TMP;	// PTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 7 | u0/cnt18<4>_MC
+ATTRIBUTES | 2151678752 | 0
+OUTPUTMC | 4 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 4
+INPUTS | 6 | u0/cnt18<1>  | u0/cnt18<0>  | u0/cnt18<2>  | u0/cnt18<3>  | u0/cnt18<4>  | u0/SCLK_TMP
+INPUTMC | 6 | 2 | 6 | 2 | 8 | 2 | 15 | 2 | 12 | 2 | 7 | 1 | 4
+EQ | 5 | 
+   u0/cnt18<4>.T := u0/cnt18<1> & u0/cnt18<0> & u0/cnt18<2> & 
+	u0/cnt18<3>
+	# u0/cnt18<1> & !u0/cnt18<0> & !u0/cnt18<2> & 
+	!u0/cnt18<3> & u0/cnt18<4>;	// (2 pt, 5 inp)
+    u0/cnt18<4>.CLK = u0/SCLK_TMP;	// PTC	(1 pt, 1 inp)
+
+MACROCELL | 1 | 15 | i<0>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 20 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 15 | 0 | 0 | 0 | 14 | 0 | 13 | 0 | 7 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 12 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 2 | 0 | 1 | 1 | 10
+INPUTS | 2 | CS  | i<0>
+INPUTMC | 2 | 2 | 4 | 1 | 15
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   i<0> := !CS & !i<0>;	// (1 pt, 2 inp)
+    i<0>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+
+MACROCELL | 1 | 14 | i<1>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 19 | 1 | 14 | 1 | 13 | 0 | 15 | 0 | 0 | 0 | 14 | 0 | 13 | 0 | 7 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 12 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 2 | 0 | 1 | 1 | 10
+INPUTS | 3 | CS  | i<0>  | i<1>
+INPUTMC | 3 | 2 | 4 | 1 | 15 | 1 | 14
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   i<1> := !CS & i<0> & !i<1>
+	# !CS & !i<0> & i<1>;	// (2 pt, 3 inp)
+    i<1>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+
+MACROCELL | 1 | 13 | i<2>_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 18 | 1 | 13 | 0 | 15 | 0 | 0 | 0 | 14 | 0 | 13 | 0 | 7 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 12 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 2 | 0 | 1 | 1 | 10
+INPUTS | 4 | CS  | i<2>  | i<0>  | i<1>
+INPUTMC | 4 | 2 | 4 | 1 | 13 | 1 | 15 | 1 | 14
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   i<2>.T := CS & i<2>
+	# !CS & i<0> & i<1>;	// (2 pt, 4 inp)
+    i<2>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+
+MACROCELL | 0 | 15 | i<3>_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 17 | 0 | 15 | 0 | 0 | 0 | 14 | 0 | 13 | 0 | 7 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 12 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 2 | 0 | 1 | 1 | 10
+INPUTS | 5 | CS  | i<3>  | i<0>  | i<1>  | i<2>
+INPUTMC | 5 | 2 | 4 | 0 | 15 | 1 | 15 | 1 | 14 | 1 | 13
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   i<3>.T := CS & i<3>
+	# !CS & i<0> & i<1> & i<2>;	// (2 pt, 5 inp)
+    i<3>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+
+MACROCELL | 1 | 1 | pdate<10>_MC
+ATTRIBUTES | 142869314 | 0
+INPUTS | 2 | pdate_tmp<10>  | CS
+INPUTMC | 2 | 0 | 14 | 2 | 4
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate<10> := pdate_tmp<10>;	// (1 pt, 1 inp)
+    pdate<10>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate<10>.CE = CS;	// (1 pt, 1 inp)
+
+MACROCELL | 0 | 14 | pdate_tmp<10>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 1 | 1
+INPUTS | 6 | din  | CS  | i<0>  | i<1>  | i<2>  | i<3>
+INPUTMC | 5 | 2 | 4 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 15
+INPUTP | 1 | 11
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate_tmp<10> := din;	// (1 pt, 1 inp)
+    pdate_tmp<10>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate_tmp<10>.CE = !CS & i<0> & !i<1> & i<2> & !i<3>;	// (1 pt, 5 inp)
+
+MACROCELL | 2 | 0 | pdate<11>_MC
+ATTRIBUTES | 142869314 | 0
+INPUTS | 2 | pdate_tmp<11>  | CS
+INPUTMC | 2 | 0 | 13 | 2 | 4
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate<11> := pdate_tmp<11>;	// (1 pt, 1 inp)
+    pdate<11>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate<11>.CE = CS;	// (1 pt, 1 inp)
+
+MACROCELL | 0 | 13 | pdate_tmp<11>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 2 | 0
+INPUTS | 6 | din  | CS  | i<0>  | i<1>  | i<2>  | i<3>
+INPUTMC | 5 | 2 | 4 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 15
+INPUTP | 1 | 11
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate_tmp<11> := din;	// (1 pt, 1 inp)
+    pdate_tmp<11>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate_tmp<11>.CE = !CS & !i<0> & !i<1> & i<2> & !i<3>;	// (1 pt, 5 inp)
+
+MACROCELL | 2 | 1 | pdate<12>_MC
+ATTRIBUTES | 142869314 | 0
+INPUTS | 2 | pdate_tmp<12>  | CS
+INPUTMC | 2 | 0 | 7 | 2 | 4
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate<12> := pdate_tmp<12>;	// (1 pt, 1 inp)
+    pdate<12>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate<12>.CE = CS;	// (1 pt, 1 inp)
+
+MACROCELL | 0 | 7 | pdate_tmp<12>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 2 | 1
+INPUTS | 6 | din  | CS  | i<0>  | i<1>  | i<2>  | i<3>
+INPUTMC | 5 | 2 | 4 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 15
+INPUTP | 1 | 11
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate_tmp<12> := din;	// (1 pt, 1 inp)
+    pdate_tmp<12>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate_tmp<12>.CE = !CS & i<0> & i<1> & !i<2> & !i<3>;	// (1 pt, 5 inp)
+
+MACROCELL | 2 | 2 | pdate<13>_MC
+ATTRIBUTES | 142869314 | 0
+INPUTS | 2 | pdate_tmp<13>  | CS
+INPUTMC | 2 | 0 | 6 | 2 | 4
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate<13> := pdate_tmp<13>;	// (1 pt, 1 inp)
+    pdate<13>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate<13>.CE = CS;	// (1 pt, 1 inp)
+
+MACROCELL | 0 | 6 | pdate_tmp<13>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 2 | 2
+INPUTS | 6 | din  | CS  | i<0>  | i<1>  | i<2>  | i<3>
+INPUTMC | 5 | 2 | 4 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 15
+INPUTP | 1 | 11
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate_tmp<13> := din;	// (1 pt, 1 inp)
+    pdate_tmp<13>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate_tmp<13>.CE = !CS & !i<0> & i<1> & !i<2> & !i<3>;	// (1 pt, 5 inp)
+
+MACROCELL | 2 | 5 | pdate<14>_MC
+ATTRIBUTES | 142869314 | 0
+INPUTS | 2 | pdate_tmp<14>  | CS
+INPUTMC | 2 | 0 | 5 | 2 | 4
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate<14> := pdate_tmp<14>;	// (1 pt, 1 inp)
+    pdate<14>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate<14>.CE = CS;	// (1 pt, 1 inp)
+
+MACROCELL | 0 | 5 | pdate_tmp<14>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 2 | 5
+INPUTS | 6 | din  | CS  | i<0>  | i<1>  | i<2>  | i<3>
+INPUTMC | 5 | 2 | 4 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 15
+INPUTP | 1 | 11
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate_tmp<14> := din;	// (1 pt, 1 inp)
+    pdate_tmp<14>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate_tmp<14>.CE = !CS & i<0> & !i<1> & !i<2> & !i<3>;	// (1 pt, 5 inp)
+
+MACROCELL | 2 | 9 | pdate<15>_MC
+ATTRIBUTES | 142869314 | 0
+INPUTS | 2 | pdate_tmp<15>  | CS
+INPUTMC | 2 | 0 | 4 | 2 | 4
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate<15> := pdate_tmp<15>;	// (1 pt, 1 inp)
+    pdate<15>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate<15>.CE = CS;	// (1 pt, 1 inp)
+
+MACROCELL | 0 | 4 | pdate_tmp<15>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 2 | 9
+INPUTS | 6 | din  | CS  | i<0>  | i<1>  | i<2>  | i<3>
+INPUTMC | 5 | 2 | 4 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 15
+INPUTP | 1 | 11
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate_tmp<15> := din;	// (1 pt, 1 inp)
+    pdate_tmp<15>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate_tmp<15>.CE = !CS & !i<0> & !i<1> & !i<2> & !i<3>;	// (1 pt, 5 inp)
+
+MACROCELL | 2 | 10 | pdate<1>_MC
+ATTRIBUTES | 142869314 | 0
+INPUTS | 2 | pdate_tmp<1>  | CS
+INPUTMC | 2 | 0 | 3 | 2 | 4
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate<1> := pdate_tmp<1>;	// (1 pt, 1 inp)
+    pdate<1>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate<1>.CE = CS;	// (1 pt, 1 inp)
+
+MACROCELL | 0 | 3 | pdate_tmp<1>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 2 | 10
+INPUTS | 6 | din  | CS  | i<0>  | i<1>  | i<2>  | i<3>
+INPUTMC | 5 | 2 | 4 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 15
+INPUTP | 1 | 11
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate_tmp<1> := din;	// (1 pt, 1 inp)
+    pdate_tmp<1>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate_tmp<1>.CE = !CS & !i<0> & i<1> & i<2> & i<3>;	// (1 pt, 5 inp)
+
+MACROCELL | 2 | 11 | pdate<2>_MC
+ATTRIBUTES | 142869314 | 0
+INPUTS | 2 | pdate_tmp<2>  | CS
+INPUTMC | 2 | 0 | 12 | 2 | 4
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate<2> := pdate_tmp<2>;	// (1 pt, 1 inp)
+    pdate<2>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate<2>.CE = CS;	// (1 pt, 1 inp)
+
+MACROCELL | 0 | 12 | pdate_tmp<2>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 2 | 11
+INPUTS | 6 | din  | CS  | i<0>  | i<1>  | i<2>  | i<3>
+INPUTMC | 5 | 2 | 4 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 15
+INPUTP | 1 | 11
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate_tmp<2> := din;	// (1 pt, 1 inp)
+    pdate_tmp<2>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate_tmp<2>.CE = !CS & i<0> & !i<1> & i<2> & i<3>;	// (1 pt, 5 inp)
+
+MACROCELL | 2 | 13 | pdate<3>_MC
+ATTRIBUTES | 142869314 | 0
+INPUTS | 2 | pdate_tmp<3>  | CS
+INPUTMC | 2 | 0 | 11 | 2 | 4
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate<3> := pdate_tmp<3>;	// (1 pt, 1 inp)
+    pdate<3>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate<3>.CE = CS;	// (1 pt, 1 inp)
+
+MACROCELL | 0 | 11 | pdate_tmp<3>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 2 | 13
+INPUTS | 6 | din  | CS  | i<0>  | i<1>  | i<2>  | i<3>
+INPUTMC | 5 | 2 | 4 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 15
+INPUTP | 1 | 11
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate_tmp<3> := din;	// (1 pt, 1 inp)
+    pdate_tmp<3>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate_tmp<3>.CE = !CS & !i<0> & !i<1> & i<2> & i<3>;	// (1 pt, 5 inp)
+
+MACROCELL | 2 | 14 | pdate<4>_MC
+ATTRIBUTES | 142869314 | 0
+INPUTS | 2 | pdate_tmp<4>  | CS
+INPUTMC | 2 | 0 | 10 | 2 | 4
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate<4> := pdate_tmp<4>;	// (1 pt, 1 inp)
+    pdate<4>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate<4>.CE = CS;	// (1 pt, 1 inp)
+
+MACROCELL | 0 | 10 | pdate_tmp<4>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 2 | 14
+INPUTS | 6 | din  | CS  | i<0>  | i<1>  | i<2>  | i<3>
+INPUTMC | 5 | 2 | 4 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 15
+INPUTP | 1 | 11
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate_tmp<4> := din;	// (1 pt, 1 inp)
+    pdate_tmp<4>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate_tmp<4>.CE = !CS & i<0> & i<1> & !i<2> & i<3>;	// (1 pt, 5 inp)
+
+MACROCELL | 3 | 0 | pdate<5>_MC
+ATTRIBUTES | 142869314 | 0
+INPUTS | 2 | pdate_tmp<5>  | CS
+INPUTMC | 2 | 0 | 9 | 2 | 4
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate<5> := pdate_tmp<5>;	// (1 pt, 1 inp)
+    pdate<5>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate<5>.CE = CS;	// (1 pt, 1 inp)
+
+MACROCELL | 0 | 9 | pdate_tmp<5>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 3 | 0
+INPUTS | 6 | din  | CS  | i<0>  | i<1>  | i<2>  | i<3>
+INPUTMC | 5 | 2 | 4 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 15
+INPUTP | 1 | 11
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate_tmp<5> := din;	// (1 pt, 1 inp)
+    pdate_tmp<5>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate_tmp<5>.CE = !CS & !i<0> & i<1> & !i<2> & i<3>;	// (1 pt, 5 inp)
+
+MACROCELL | 3 | 1 | pdate<6>_MC
+ATTRIBUTES | 142869314 | 0
+INPUTS | 2 | pdate_tmp<6>  | CS
+INPUTMC | 2 | 0 | 8 | 2 | 4
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate<6> := pdate_tmp<6>;	// (1 pt, 1 inp)
+    pdate<6>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate<6>.CE = CS;	// (1 pt, 1 inp)
+
+MACROCELL | 0 | 8 | pdate_tmp<6>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 3 | 1
+INPUTS | 6 | din  | CS  | i<0>  | i<1>  | i<2>  | i<3>
+INPUTMC | 5 | 2 | 4 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 15
+INPUTP | 1 | 11
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate_tmp<6> := din;	// (1 pt, 1 inp)
+    pdate_tmp<6>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate_tmp<6>.CE = !CS & i<0> & !i<1> & !i<2> & i<3>;	// (1 pt, 5 inp)
+
+MACROCELL | 3 | 6 | pdate<7>_MC
+ATTRIBUTES | 142869314 | 0
+INPUTS | 2 | pdate_tmp<7>  | CS
+INPUTMC | 2 | 0 | 2 | 2 | 4
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate<7> := pdate_tmp<7>;	// (1 pt, 1 inp)
+    pdate<7>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate<7>.CE = CS;	// (1 pt, 1 inp)
+
+MACROCELL | 0 | 2 | pdate_tmp<7>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 3 | 6
+INPUTS | 6 | din  | CS  | i<0>  | i<1>  | i<2>  | i<3>
+INPUTMC | 5 | 2 | 4 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 15
+INPUTP | 1 | 11
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate_tmp<7> := din;	// (1 pt, 1 inp)
+    pdate_tmp<7>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate_tmp<7>.CE = !CS & !i<0> & !i<1> & !i<2> & i<3>;	// (1 pt, 5 inp)
+
+MACROCELL | 3 | 10 | pdate<8>_MC
+ATTRIBUTES | 142869314 | 0
+INPUTS | 2 | pdate_tmp<8>  | CS
+INPUTMC | 2 | 0 | 1 | 2 | 4
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate<8> := pdate_tmp<8>;	// (1 pt, 1 inp)
+    pdate<8>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate<8>.CE = CS;	// (1 pt, 1 inp)
+
+MACROCELL | 0 | 1 | pdate_tmp<8>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 3 | 10
+INPUTS | 6 | din  | CS  | i<0>  | i<1>  | i<2>  | i<3>
+INPUTMC | 5 | 2 | 4 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 15
+INPUTP | 1 | 11
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate_tmp<8> := din;	// (1 pt, 1 inp)
+    pdate_tmp<8>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate_tmp<8>.CE = !CS & i<0> & i<1> & i<2> & !i<3>;	// (1 pt, 5 inp)
+
+MACROCELL | 3 | 12 | pdate<9>_MC
+ATTRIBUTES | 142869314 | 0
+INPUTS | 2 | pdate_tmp<9>  | CS
+INPUTMC | 2 | 1 | 10 | 2 | 4
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate<9> := pdate_tmp<9>;	// (1 pt, 1 inp)
+    pdate<9>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate<9>.CE = CS;	// (1 pt, 1 inp)
+
+MACROCELL | 1 | 10 | pdate_tmp<9>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 3 | 12
+INPUTS | 6 | din  | CS  | i<0>  | i<1>  | i<2>  | i<3>
+INPUTMC | 5 | 2 | 4 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 15
+INPUTP | 1 | 11
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   pdate_tmp<9> := din;	// (1 pt, 1 inp)
+    pdate_tmp<9>.CLK = !(!CS & !u0/SCLK_TMP);	// CTC	(1 pt, 2 inp)
+    pdate_tmp<9>.CE = !CS & !i<0> & i<1> & i<2> & !i<3>;	// (1 pt, 5 inp)
+
+PIN | F50M | 4096 | 16 | LVCMOS18 | 19 | 10 | 1 | 3 | 1 | 5 | 1 | 6 | 1 | 7 | 1 | 9 | 1 | 11 | 1 | 12 | 1 | 2 | 1 | 8 | 1 | 4
+PIN | din | 64 | 16 | LVCMOS18 | 11 | 16 | 0 | 14 | 0 | 13 | 0 | 7 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 12 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 2 | 0 | 1 | 1 | 10 | 0 | 0
+PIN | pdate<0> | 536871040 | 0 | LVCMOS18 | 12
+PIN | pdate<10> | 536871040 | 0 | LVCMOS18 | 13
+PIN | pdate<11> | 536871040 | 0 | LVCMOS18 | 73
+PIN | pdate<12> | 536871040 | 0 | LVCMOS18 | 72
+PIN | pdate<13> | 536871040 | 0 | LVCMOS18 | 71
+PIN | pdate<14> | 536871040 | 0 | LVCMOS18 | 65
+PIN | pdate<15> | 536871040 | 0 | LVCMOS18 | 61
+PIN | pdate<1> | 536871040 | 0 | LVCMOS18 | 60
+PIN | pdate<2> | 536871040 | 0 | LVCMOS18 | 59
+PIN | pdate<3> | 536871040 | 0 | LVCMOS18 | 56
+PIN | pdate<4> | 536871040 | 0 | LVCMOS18 | 55
+PIN | pdate<5> | 536871040 | 0 | LVCMOS18 | 31
+PIN | pdate<6> | 536871040 | 0 | LVCMOS18 | 32
+PIN | pdate<7> | 536871040 | 0 | LVCMOS18 | 38
+PIN | pdate<8> | 536871040 | 0 | LVCMOS18 | 46
+PIN | pdate<9> | 536871040 | 0 | LVCMOS18 | 48
